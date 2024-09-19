@@ -68,10 +68,10 @@ div.con div.intro div.intro_txt h1{font-size: 80px; position: sticky; top: 30px;
 div.con div.intro div.intro_txt h1 span{color: #336949; font-size: 100px;}
 
 div.con div.intro div.intro_txt div.intro_detail{position: absolute; width: 100%; height: 100%; left: 0; top: 0;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position{position: sticky; top: 250px; padding: 0 0 100px 20px; margin-top: 500px; box-sizing: border-box;}        
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position{position: sticky; top: 250px; padding: 0 0 100px 20px; margin-top: 500px; box-sizing: border-box;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p::before{content: ""; position: absolute; top: -100px; left: 50%; transform: translateX(-60%); width: 300px; height: 300px; background-image: url(../Planet_images/bubble_txtbg.png); background-size: cover; background-position: center; z-index: -1; opacity: 0.4;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p{position: relative; font-size: 60px; font-family: Happiness-Sans-Bold; padding: 20px 0; width: 400px;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(1){left: 200px; transition: 0.5s;}
+/* div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(1){left: 200px; transition: 0.5s;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(2){left: 800px; transition: 0.5s 0.2s;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(3){left: 1400px; transition: 0.5s 0.4s;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(4){left: 300px; transition: 0.5s 0.6s;}
@@ -80,7 +80,7 @@ div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(2).on{opacity: 1;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(3).on{opacity: 1;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(4).on{opacity: 1;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(5).on{opacity: 1;}
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(5).on{opacity: 1;} */
 
 div.con div.intro p.logo{position: sticky; right: 0; top: 30px; height: 480px;}
 div.con div.intro p.logo img{width: 100%; height: 100%; object-fit: cover;}
