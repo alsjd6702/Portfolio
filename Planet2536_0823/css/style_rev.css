@@ -100,7 +100,9 @@ div.con div.ongoing div.ongoing_img li div.ongoing_desc div.ongoing_info{positio
 div.con div.ongoing div.ongoing_img li:hover div.ongoing_desc div.ongoing_info{opacity: 1;}
 div.con div.ongoing div.ongoing_img li div.ongoing_desc div.ongoing_info div.info_position{position: absolute; top: 50%; transform: translateY(-50%); width: 100%;}
 div.con div.ongoing div.ongoing_img li div.ongoing_desc div.ongoing_info p{color: #fff; text-align: center; font-size: 18px; line-height: 40px; font-family: Happiness-Sans-Regular;}
-div.con div.ongoing div.ongoing_img li div.ongoing_detail{padding-top: 20px;}
+div.con div.ongoing div.ongoing_img li div.ongoing_detail{padding: 20px 10px 0;}
+div.con div.ongoing div.ongoing_img li div.ongoing_detail p{font-family: Happiness-Sans-Regular;}
+div.con div.ongoing div.ongoing_img li div.ongoing_detail p.className{font-size: 15px;}
 
 
 div.con div.class{display: flex; margin-top: 100px; width: 100%; position: relative;}
