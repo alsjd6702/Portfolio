@@ -96,7 +96,9 @@ div.con div.ongoing div.ongoing_img li{flex: 1 1 15%;}
 div.con div.ongoing div.ongoing_img li div.ongoing_desc{width: 100%; position: relative;}
 div.con div.ongoing div.ongoing_img li div.ongoing_desc > p{width: 100%; border-radius: 50px; overflow: hidden; font-size: 0;}
 div.con div.ongoing div.ongoing_img li div.ongoing_desc > p img{width: 100%; object-fit: cover;}
-div.con div.ongoing div.ongoing_img li div.ongoing_desc div.ongoing_info{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+div.con div.ongoing div.ongoing_img li div.ongoing_desc div.ongoing_info{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+div.con div.ongoing div.ongoing_img li div.ongoing_desc div.ongoing_info div.info_position{position: absolute; top: 50%; transform: translateY(-50%); width: 100%;}
+div.con div.ongoing div.ongoing_img li div.ongoing_desc div.ongoing_info p{color: #fff; text-align: center; font-size: 18px; line-height: 35px;}
 div.con div.ongoing div.ongoing_img li div.ongoing_detail{padding-top: 20px;}
 
 
