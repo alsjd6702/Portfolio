@@ -84,22 +84,20 @@ div.con div.intro div.intro_txt div.intro_detail{position: absolute; width: 100%
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position{position: sticky; top: 230px; padding: 0 0 70px 20px; margin-top: 500px; box-sizing: border-box;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p{position: relative; font-size: 60px; font-family: Happiness-Sans-Bold; padding: 20px 0; width: 400px;}
 div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p::before{content: ""; position: absolute; top: -100px; left: 50%; transform: translateX(-60%); width: 300px; height: 300px; background-image: url(../Planet_images/bubble_txtbg.png); background-size: cover; background-position: center; z-index: -1; opacity: 0.4;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(1){left: 200px; transition: 0.5s;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(2){left: 800px; transition: 0.5s 0.2s;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(3){left: 1400px; transition: 0.5s 0.4s;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(4){left: 300px; transition: 0.5s 0.6s;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(5){left: 950px; width: 600px; transition: 0.5s 0.8s;}
-/* div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(1).on{opacity: 1;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(2).on{opacity: 1;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(3).on{opacity: 1;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(4).on{opacity: 1;}
-div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position:hover p:nth-child(5).on{opacity: 1;} */
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p{top: 30px; opacity: 0;}
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(1){left: 200px; transition: 1s;}
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(2){left: 800px; transition: 1s 0.3s;}
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(3){left: 1400px; transition: 1s 0.6s;}
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(4){left: 300px; transition: 1s 0.9s;}
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p:nth-child(5){left: 950px; width: 600px; transition: 1s 1.2s;}
+div.con div.intro div.intro_txt div.intro_detail div.intro_detail_position p.on{top: 0; opacity: 1;}
 
 div.con div.intro p.logo{position: sticky; right: 0; top: 30px; height: 480px;}
 div.con div.intro p.logo img{width: 100%; height: 100%; object-fit: cover;}
 div.con div.intro p.logo img.on{filter: opacity(0.5); transition: 0.5s;}
 div.con div.intro p.logo img.on2{filter: opacity(0.3); transition: 0.5s;}
 div.con div.intro p.logo img.on3{filter: opacity(0.1); transition: 0.5s;}
+div.con div.intro p.logo img.on4{filter: opacity(0); transition: 0.5s;}
 
 div.con div.ongoing{width: 100%; padding: 0 20px; box-sizing: border-box; margin: 100px auto 0;}
 div.con div.ongoing div.ongoing_txt p:first-child{font-size: 50px; font-family: Happiness-Sans-Title; padding-bottom: 10px; color: #336949;}
@@ -120,8 +118,8 @@ div.con div.ongoing div.ongoing_img li div.ongoing_detail p.className{font-size:
 div.con div.class{display: flex; width: 100%; position: relative;}
 div.con div.class div.class_txt{width: 35%; position: sticky; top: 0; height: 100vh;}
 
-div.con div.planned{margin: 100px 0 0; background-image: linear-gradient(to bottom, #ebbba7 0%, #cd9cf2 100%);}
-div.con div.decided{background-image: linear-gradient(to bottom, #cd9cf2 0%, #73d7ff 100%);}
+div.con div.planned{margin: 100px 0 0; background-image: linear-gradient(to bottom, #fff 0%, #ebbba7 10%, #cd9cf2 100%);}
+div.con div.decided{background-image: linear-gradient(to bottom, #cd9cf2 0%, #73d7ff 90%, #fff 100%);}
 
 div.con div.class div.class_txt div.class_title{position: absolute; top: 50%; transform: translateY(-50%); width: 100%; text-align: center;}
 div.con div.class div.class_txt div.class_title p{font-family: Happiness-Sans-Title;}
@@ -151,21 +149,30 @@ div.con div.class div.class_img ul li a div.info div.info_txt{}
 div.con div.class div.class_img ul li a div.info div.info_txt p{color: #000; font-size: 18px; font-family: Happiness-Sans-Regular; line-height: 35px;}
 div.con div.class div.class_img ul li a div.info div.info_txt p.className{font-size: 22px; font-family: Happiness-Sans-Bold; padding-bottom: 15px;}
 
-/* div.con div.class div.class_img ul li:nth-child(2) a div.review{text-align: right;}
- */
+div.con div.lab{width: 100%; padding: 0 20px; box-sizing: border-box; margin: 100px auto 150px;}
+div.con div.lab div.lab_title p{font-size: 50px; font-family: Happiness-Sans-Title; padding-bottom: 30px; color: #336949;}
 
- /* div.con div.class div.class_txt div.per div.info{width: 370px; margin: 0 auto;}
-div.con div.class div.class_txt div.per div.info p{font-size: 18px; font-family: Happiness-Sans-Regular; line-height: 40px; letter-spacing: 0.7px;}
-div.con div.class div.class_txt div.per div.info p strong{padding-right: 3px;}
-div.con div.class div.class_txt div.per div.info p.classMission2{text-indent: 60px;} */
+div.con div.lab ul{display: flex; gap: 50px; justify-content: center;}
+div.con div.lab ul li{flex: 0 1 17%; height: 500px;}
+div.con div.lab ul li:nth-child(2),
+div.con div.lab ul li:nth-child(4){position: relative; top: 30px;}
+div.con div.lab ul li a > p{width: 100%; height: 100%; border-radius: 50px; overflow: hidden;}
+div.con div.lab ul li a > p img{width: 100%; height: 100%; object-fit: cover;}
 
-/* div.con div.class div.class_img ul li a > p::after{content: "자세히 보기"; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 30px; color: #fff; text-align: center; font-family: Happiness-Sans-Bold; border: 3px solid #fff; padding: 30px; border-radius: 30px; opacity: 0; transition: 0.5s; scale: 0; transform-origin: 0;} */
-/* div.con div.class div.class_img ul li a > p:hover::after{opacity: 1; scale: 1;}
 
-div.con div.class div.class_img ul li a div.review{width: 50%;}
-div.con div.class div.class_img ul li a div.review p{color: #000; font-size: 18px;}
-div.con div.class div.class_img ul li a div.review p.className{font-size: 20px; font-family: Happiness-Sans-Bold; position: relative;} */
+footer{width: 100%; padding: 30px; box-sizing: border-box; background: #000; display: flex; justify-content: space-between;}
+footer li{color: #fff; font-family: Happiness-Sans-Regular; font-size: 12px;}
+footer li a{color: #fff; font-family: Happiness-Sans-Regular; font-size: 12px;}
+
+footer div.supplier_info{flex: 0 1 70%;}
+footer div.supplier_info ul.supplier_detail li.supplier{font-family: Happiness-Sans-Bold; font-size: 13px; padding-bottom: 10px;}
+footer div.supplier_info ul.supplier_detail li{line-height: 20px;}
+footer div.supplier_info ul.supplier_menu{display: flex; margin-top: 20px; gap: 20px;}
+footer div.supplier_info ul.supplier_menu li::after{content: "|"; position: relative; left: 10px;}
+footer div.supplier_info ul.supplier_menu li:last-child::after{content: "";}
+
+footer div.operation_info{position: relative; flex: 0 1 30%;}
+footer div.operation_info ul.operation_detail{position: absolute; bottom: 0; right: 0;}
+footer div.operation_info ul.operation_detail li{line-height: 20px;}
+
 /* div.con div.class div.class_img ul li a div.review p.className::after{content: ""; position: absolute; right: 0; top: 0; width: 50px; height: 50px; background-image: url(Planet_images/thumb.png); background-size: cover; background-repeat: no-repeat;} */
-/* div.con div.class div.class_img ul li a div.review p:nth-child(2){color: rgb(87, 87, 87); font-family: Happiness-Sans-Bold; padding: 20px 0 10px;}
-div.con div.class div.class_img ul li a div.review p:nth-child(3){font-family: Happiness-Sans-Regular; word-break: keep-all; line-height: 27px; letter-spacing: 1px;} */
-

@@ -11,9 +11,20 @@ window.onscroll = function(){
         logo.classList.add("on2");
     } if(ht > 750){
         logo.classList.add("on3");
+    } if(ht > 2100){
+        logo.classList.add("on4");
+    }
+
+    let introCon = document.querySelectorAll(".intro_detail_position p");
+    if(ht > 700){
+        introCon[0].classList.add("on");     
+        introCon[1].classList.add("on");     
+        introCon[2].classList.add("on");     
+        introCon[3].classList.add("on");     
+        introCon[4].classList.add("on");
     }
 }
-let planned = document.querySelector("div.planned");
-let decided = document.querySelector("div.decided");
-let conInfo = document.querySelectorAll("div.per");
-let classImg = document.querySelectorAll("div.class_img");
+
+let classImg = document.querySelector(".class_img");
+let classTitle = document.querySelector(".class_txt");
+// let conInfo = document.querySelectorAll("div.per");
