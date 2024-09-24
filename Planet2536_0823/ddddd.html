@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{width: 500px; height: 500px; position: absolute; left: 0; top: 0; border: 3px solid;}
+        div img{width: 100%; height: 100%; object-fit: cover;}
+
+        .total:hover .flip-vertical-left {
+            animation: flip-vertical-left 0.5s linear forwards;
+        }
+
+        @keyframes flip-vertical-left {
+            0% {
+                transform: rotateY(0);
+            }
+            100% {
+                transform: rotateY(-100deg);
+                opacity: 0;
+            }
+        }
+
+        .total:hover .flip-vertical-left2 {
+            animation: flip-vertical-left2 0.5s linear 0.5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes flip-vertical-left2 {
+            0% {
+                transform: rotateY(-80deg);
+                opacity: 0;
+            }
+            100% {
+                transform: rotateY(-180deg);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#">
+        <div class="total">
+            <div class="flip-vertical-left2">
+                <img src="Planet_images/publishing.jpg" alt="">
+            </div>
+            <div class="flip-vertical-left">
+                <img src="Planet_images/eng_introduction.jpg" alt="">
+            </div>
+        </div>
+    </a>
+</body>
+</html>
