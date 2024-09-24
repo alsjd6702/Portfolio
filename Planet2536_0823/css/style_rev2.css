@@ -150,29 +150,30 @@ div.con div.class div.class_img ul li a div.info div.info_txt p{color: #000; fon
 div.con div.class div.class_img ul li a div.info div.info_txt p.className{font-size: 22px; font-family: Happiness-Sans-Bold; padding-bottom: 15px;}
 
 div.con div.lab{width: 100%; padding: 0 20px; box-sizing: border-box; margin: 100px auto 150px;}
-div.con div.lab div.lab_title p{font-size: 50px; font-family: Happiness-Sans-Title; padding-bottom: 30px; color: #336949;}
+div.con div.lab div.lab_title p{font-size: 50px; font-family: Happiness-Sans-Title; padding-bottom: 50px; color: #336949;}
 
 div.con div.lab ul{display: flex; gap: 50px; justify-content: center;}
-div.con div.lab ul li{flex: 0 1 17%; height: 500px;}
+div.con div.lab ul li{flex: 0 1 17%; height: 500px; position: relative; border: 2px solid #000; border-radius: 50px; overflow: hidden; box-shadow: 15px 15px 15px #3b3b3b31;}
 div.con div.lab ul li:nth-child(2),
 div.con div.lab ul li:nth-child(4){position: relative; top: 30px;}
-div.con div.lab ul li a > p{width: 100%; height: 100%; border-radius: 50px; overflow: hidden;}
+div.con div.lab ul li a > p{width: 100%; height: 100%;}
 div.con div.lab ul li a > p img{width: 100%; height: 100%; object-fit: cover;}
+div.con div.lab ul li a div.lab_txt{position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 30px; box-sizing: border-box; background-image: linear-gradient(to bottom, #2e2e2e49 0%, #ffffff00 100%)}
+div.con div.lab ul li a div.lab_txt p{font-family: Happiness-Sans-Title; color: #fff; letter-spacing: 1px;}
+div.con div.lab ul li a div.lab_txt p:last-child{font-size: 20px; line-height: 30px; padding-top: 10px;}
 
 
-footer{width: 100%; padding: 30px; box-sizing: border-box; background: #000; display: flex; justify-content: space-between;}
+footer{width: 100%; padding: 30px; box-sizing: border-box; background: #000;}
 footer li{color: #fff; font-family: Happiness-Sans-Regular; font-size: 12px;}
 footer li a{color: #fff; font-family: Happiness-Sans-Regular; font-size: 12px;}
 
-footer div.supplier_info{flex: 0 1 70%;}
+footer div.supplier_info{width: 100%;}
 footer div.supplier_info ul.supplier_detail li.supplier{font-family: Happiness-Sans-Bold; font-size: 13px; padding-bottom: 10px;}
 footer div.supplier_info ul.supplier_detail li{line-height: 20px;}
+footer div.supplier_info ul.supplier_detail div.group{display: flex; gap: 20px;}
+
 footer div.supplier_info ul.supplier_menu{display: flex; margin-top: 20px; gap: 20px;}
 footer div.supplier_info ul.supplier_menu li::after{content: "|"; position: relative; left: 10px;}
 footer div.supplier_info ul.supplier_menu li:last-child::after{content: "";}
-
-footer div.operation_info{position: relative; flex: 0 1 30%;}
-footer div.operation_info ul.operation_detail{position: absolute; bottom: 0; right: 0;}
-footer div.operation_info ul.operation_detail li{line-height: 20px;}
 
 /* div.con div.class div.class_img ul li a div.review p.className::after{content: ""; position: absolute; right: 0; top: 0; width: 50px; height: 50px; background-image: url(Planet_images/thumb.png); background-size: cover; background-repeat: no-repeat;} */
