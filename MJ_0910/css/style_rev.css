@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+div.Con_Top{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    animation: AfterIntroBG 1s ease-in-out 6s forwards;
+}
+/* @keyframes AfterIntroBG {
+    100%{background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    }
+} */
+@keyframes AfterIntroBG {
+    100%{background-image: linear-gradient(to top, #ffc3a0 0%, #ffafbd 100%);
+    }
+}
+/* @keyframes AfterIntroBG {
+    100%{background-image: linear-gradient(to bottom, #feada6 0%, #f5efef 100%);
+    }
+} */
+/* @keyframes AfterIntroBG {
+    100%{background-color: #fba8a4;
+        background-image: linear-gradient(315deg, #fba8a4 0%, #dad2f3 74%);
+        
+    }
+} */
+/* @keyframes AfterIntroBG {
+    100%{background-color: #eec0c6;
+        background-image: linear-gradient(315deg, #eec0c6 0%, #e58c8a 74%);
+    }
+} */
+
+div.Con_Top p{
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+div.Con_Top p.Name{
+    width: 60px;
+    font-size: 80px;
+    font-weight: bold;    
+    color: #fff;
+    word-wrap: break-word;
+    line-height: 82px;
+    padding-top: 10px;
+    animation: Name 2s ease-in-out 1.5s forwards;
+    scale: 10;
+    opacity: 0;
+    transform-origin: center 0;
+}
+
+div.Con_Top p.Name span:first-of-type{
+    color: rgb(43, 80, 245);
+}
+div.Con_Top p.Name span:nth-of-type(2){
+    color: rgb(241, 229, 53);
+}
+div.Con_Top p.Name span:nth-of-type(3){
+    color: rgb(243, 81, 41);
+}
+@keyframes Name {
+    100%{transform: scale(0.1); opacity: 1;}
+}
+
+div.Con_Top div{
+    position: absolute;
+    animation: AfterIntroOp 1s ease-in-out 6s forwards;
+}
+@keyframes AfterIntroOp {
+    100%{opacity: 0;}
+}
+
+div.Con_Top div.Name_Word1{  
+    top: -10px;
+    left: 908px;
+}
+div.Con_Top div.Name_Word2{
+    top: 239px;
+    left: 908px;
+}
+div.Con_Top div.Name_Word3{
+    top: 485px;
+    left: 908px;
+}
+div.Con_Top div > span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 80px;
+    font-weight: bold;
+}
+div.Con_Top div span.Word_White{
+    color: #fff;
+    opacity: 0;
+    transition: 1s;
+    animation: NameWord 1s ease-in-out 3.2s forwards;
+}
+div.Con_Top div.Name_Word1 span.Word_White span,
+div.Con_Top div.Name_Word1 span.Word_Color{
+    color: rgb(43, 80, 245);
+}
+div.Con_Top div.Name_Word2 span.Word_White span,
+div.Con_Top div.Name_Word2 span.Word_Color{
+    color: rgb(241, 229, 53);
+}
+div.Con_Top div.Name_Word3 span.Word_White span,
+div.Con_Top div.Name_Word3 span.Word_Color{
+    color: rgb(243, 81, 41);
+}
+div.Con_Top div span.Word_Color{
+    width: 0;
+    overflow: hidden;
+    animation: NameWordColor 1s ease-in-out 3.7s forwards;
+}
+
+@keyframes NameWord {
+    100%{opacity: 1;}
+}
+@keyframes NameWordColor {
+    100%{width: 330px;}
+}

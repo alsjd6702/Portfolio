@@ -96,5 +96,6 @@ div.Con_Top > span:nth-of-type(6){
     100%{opacity: 1;}
 }
 @keyframes NameWordColor {
+    0%{width: 0;}
     100%{width: 302.25px;}
 }
