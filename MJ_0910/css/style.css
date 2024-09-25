@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+div.Con_Top{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+div.Con_Top p{
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+}
+div.Con_Top p.Name{
+    width: 60px;
+    font-size: 80px;
+    font-weight: bold;    
+    color: #fff;
+    word-wrap: break-word;
+    line-height: 82px;
+    padding-top: 10px;
+    animation: Name 2s ease-in-out 1.5s forwards;
+    scale: 10;
+    opacity: 0;
+    transform-origin: center 0;
+}
+div.Con_Top p.Name span:first-of-type{
+    color: rgb(43, 80, 245);
+}
+div.Con_Top p.Name span:nth-of-type(2){
+    color: rgb(241, 229, 53);
+}
+div.Con_Top p.Name span:nth-of-type(3){
+    color: rgb(243, 81, 41);
+}
+@keyframes Name {
+    100%{transform: scale(0.1); opacity: 1;}
+}
+
+div.Con_Top > span{
+    position: absolute;
+    font-size: 80px;
+    font-weight: bold;
+}
+div.Con_Top > span.Name_Word1{
+}
+div.Con_Top > span.Name_Word2{
+    top: 240px;
+}
+div.Con_Top > span.Name_Word3{
+    top: 490px;
+}
+div.Con_Top > span:nth-of-type(1),
+div.Con_Top > span:nth-of-type(2),
+div.Con_Top > span:nth-of-type(3){
+    color: #fff;
+    opacity: 0;
+    transition: 1s;
+    animation: NameWord 1s ease-in-out 3s forwards;
+}
+div.Con_Top > span:nth-of-type(1) span,
+div.Con_Top > span:nth-of-type(4){
+    color: rgb(43, 80, 245);
+}
+div.Con_Top > span:nth-of-type(2) span,
+div.Con_Top > span:nth-of-type(5){
+    color: rgb(241, 229, 53);
+}
+div.Con_Top > span:nth-of-type(3) span,
+div.Con_Top > span:nth-of-type(6){
+    color: rgb(243, 81, 41);
+}
+div.Con_Top > span:nth-of-type(4),
+div.Con_Top > span:nth-of-type(5),
+div.Con_Top > span:nth-of-type(6){
+    width: 0;
+    overflow: hidden;
+    animation: NameWordColor 1s ease-in-out 4s forwards;
+}
+
+@keyframes NameWord {
+    100%{opacity: 1;}
+}
+@keyframes NameWordColor {
+    100%{width: 302.25px;}
+}
