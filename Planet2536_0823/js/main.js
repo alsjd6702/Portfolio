@@ -11,7 +11,7 @@ window.onscroll = function(){
         logo.classList.add("on2");
     } if(ht > 750){
         logo.classList.add("on3");
-    } if(ht > 2100){
+    } if(ht > 2000){
         logo.classList.add("on4");
     }
 
