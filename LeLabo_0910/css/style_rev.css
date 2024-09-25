@@ -1,5 +1,18 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: SangSangClover_Regular;
+    src: url(../LeLabo_webfonts/SangSangClover_Regular.ttf) format("opentype");
+}
+@font-face {
+    font-family: NotoSansKR-Regular;
+    src: url(../LeLabo_webfonts/NotoSansKR-Regular.ttf) format("opentype");
+}
+@font-face {
+    font-family: NotoSansKR-Bold;
+    src: url(../LeLabo_webfonts/NotoSansKR-Bold.ttf) format("opentype");
+}
+
 *{
     margin: 0;
     padding: 0;
