@@ -133,14 +133,15 @@ div.con div.class div.class_txt{width: 35%; position: sticky; top: 0; height: 10
 div.con div.planned{margin: 100px 0 0; background-image: linear-gradient(to bottom, #fff 0%, #ebbba7 10%, #cd9cf2 100%);}
 div.con div.decided{background-image: linear-gradient(to bottom, #cd9cf2 0%, #73d7ff 90%, #fff 100%);}
 
-div.con div.class div.class_txt div.class_title{position: absolute; top: 50%; transform: translateY(-50%); width: 100%; text-align: center;}
+div.con div.class div.class_txt div.class_title{position: absolute; top: 50%; transform: translateY(-50%); width: 100%; text-align: center; transition: 0.5s;}
 div.con div.class div.class_txt div.class_title p{font-family: Happiness-Sans-Title;}
 div.con div.class div.class_txt div.class_title p:first-child{font-size: 50px; padding-bottom: 20px; color: #fff;}
 div.con div.class div.class_txt div.class_title p:nth-child(2){font-size: 30px;}
-div.con div.class div.class_txt div.per{position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 30px 0; background: rgba(0,0,0,0.5); opacity: 0; transition: 0.5s;}
-div.con div.class div.class_txt div.per p{font-size: 25px; font-family: Happiness-Sans-Bold; text-align: center;}
-div.con div.class div.class_txt div.per p.className{padding-bottom: 30px; word-break: keep-all;}
-div.con div.class div.class_txt div.per div.desc p{line-height: 50px; color: #ffeeca;}
+div.con div.class div.class_txt div.desc_hidden div.per{position: absolute; top: 50%; transform: translateY(-50%); width: 100%; padding: 20px 0; background: rgba(0,0,0,0.7); opacity: 0; transition: 0.5s;}
+div.con div.class div.class_txt div.desc_hidden div.per p{font-size: 22px; font-family: Happiness-Sans-Bold; text-align: center; line-height: 50px; color: #fff;}
+div.con div.class div.class_txt div.desc_hidden div.per p.className{padding-bottom: 15px; word-break: keep-all; font-size: 25px;}
+div.con div.planned div.class_txt div.desc_hidden div.per p.className{color: #dcaccd;}
+div.con div.decided div.class_txt div.desc_hidden div.per p.className{color: #a0baf9;}
 
 div.con div.class div.class_img{width: 65%; padding: 100px 20px; box-sizing: border-box;}
 div.con div.class div.class_img ul li{padding: 15px 0;}

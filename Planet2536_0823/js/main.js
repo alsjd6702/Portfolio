@@ -7,7 +7,7 @@ gsap.to(".intro_detail_position p:first-child",{
         start: "top 45%",
         end: "bottom 50%",
         toggleActions: "play pause resume reverse",
-        scrub: 0,
+        scrub: 2,
     },
 });
 gsap.to(".intro_detail_position p:nth-child(2)",{
@@ -19,7 +19,7 @@ gsap.to(".intro_detail_position p:nth-child(2)",{
         start: "top 46%",
         end: "bottom 51%",
         toggleActions: "play pause resume reverse",
-        scrub: 0,
+        scrub: 2,
     },
 });
 gsap.to(".intro_detail_position p:nth-child(3)",{
@@ -31,7 +31,7 @@ gsap.to(".intro_detail_position p:nth-child(3)",{
         start: "top 47%",
         end: "bottom 52%",
         toggleActions: "play pause resume reverse",
-        scrub: 0,
+        scrub: 2,
     },
 });
 gsap.to(".intro_detail_position p:nth-child(4)",{
@@ -43,7 +43,7 @@ gsap.to(".intro_detail_position p:nth-child(4)",{
         start: "top 48%",
         end: "bottom 53%",
         toggleActions: "play pause resume reverse",
-        scrub: 0,
+        scrub: 2,
     },
 });
 gsap.to(".intro_detail_position p:nth-child(5)",{
@@ -55,7 +55,7 @@ gsap.to(".intro_detail_position p:nth-child(5)",{
         start: "top 49%",
         end: "bottom 54%",
         toggleActions: "play pause resume reverse",
-        scrub: 0,
+        scrub: 2,
     },
 });
 
@@ -72,23 +72,47 @@ gsap.to(".logo",{
 });
 
 $(function(){
-    $(".hidden_desc>div").eq(0).css("opacity","1");
-    $(".class_img ul li").hover(function(){
+    $(".planned .class_img ul li").hover(function(){
         let i = $(this).index();
-        console.log(i)
-        // $(".hidden_desc>div").css("opacity","0");
-        // $(".hidden_desc>div").eq(i).css("opacity","1");
+        console.log(i);
+        $(".planned .class_title").css("opacity","0");        
+        $(".planned .desc_hidden > div").css("opacity","0");
+        $(".planned .desc_hidden > div").eq(i).css("opacity","1");
+        $(".class .class_txt").css("background-size","cover").css("background-repeat","no-repeat").css("background-position","center");
         if(i == 0){
-          $(".class_txt").css("background-image","url(Planet_images/yoga.jpg)") ; 
-        }else if(i == 1){
-            $(".class_txt").css("background-image","url(Planet_images/camera_master.jpg)") ;
-        }else if(i == 2){
-            $(".class_txt").css("background-image","url(Planet_images/fitness.png)") ;
-        }
-        
-    })
+            $(".planned .class_txt").css("background-image","url(Planet_images/yoga.jpg)");
+        } else if(i == 1){
+            $(".planned .class_txt").css("background-image","url(Planet_images/camera_master.jpg)");
+        } else if(i == 2){
+            $(".planned .class_txt").css("background-image","url(Planet_images/fitness.png)");
+        }        
+    }, function(){
+        $(".planned .class_txt").css("background-image","none");
+        $(".planned .class_title").css("opacity","1");        
+        $(".planned .desc_hidden > div").css("opacity","0");
+
+    });
 });
 
-// let classImg = document.querySelector(".class_img");
-// let classTitle = document.querySelector(".class_txt");
-// let conInfo = document.querySelectorAll("div.per");
+$(function(){
+    $(".decided .class_img ul li").hover(function(){
+        let i = $(this).index();
+        console.log(i);
+        $(".decided .class_title").css("opacity","0");        
+        $(".decided .desc_hidden > div").css("opacity","0");
+        $(".decided .desc_hidden > div").eq(i).css("opacity","1");
+        $(".class .class_txt").css("background-size","cover").css("background-repeat","no-repeat").css("background-position","center");
+        if(i == 0){
+            $(".decided .class_txt").css("background-image","url(Planet_images/running_3km.jpg)");
+        } else if(i == 1){
+            $(".decided .class_txt").css("background-image","url(Planet_images/dancing.jpg)");
+        } else if(i == 2){
+            $(".decided .class_txt").css("background-image","url(Planet_images/swimming.jpg)");
+        }
+    }, function(){
+        $(".decided .class_txt").css("background-image","none");
+        $(".decided .class_title").css("opacity","1");        
+        $(".decided .desc_hidden > div").css("opacity","0");
+
+    });
+});
