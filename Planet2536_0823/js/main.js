@@ -71,6 +71,24 @@ gsap.to(".logo",{
     },
 });
 
-let classImg = document.querySelector(".class_img");
-let classTitle = document.querySelector(".class_txt");
+$(function(){
+    $(".hidden_desc>div").eq(0).css("opacity","1");
+    $(".class_img ul li").hover(function(){
+        let i = $(this).index();
+        console.log(i)
+        // $(".hidden_desc>div").css("opacity","0");
+        // $(".hidden_desc>div").eq(i).css("opacity","1");
+        if(i == 0){
+          $(".class_txt").css("background-image","url(Planet_images/yoga.jpg)") ; 
+        }else if(i == 1){
+            $(".class_txt").css("background-image","url(Planet_images/camera_master.jpg)") ;
+        }else if(i == 2){
+            $(".class_txt").css("background-image","url(Planet_images/fitness.png)") ;
+        }
+        
+    })
+});
+
+// let classImg = document.querySelector(".class_img");
+// let classTitle = document.querySelector(".class_txt");
 // let conInfo = document.querySelectorAll("div.per");

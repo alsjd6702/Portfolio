@@ -199,11 +199,36 @@ header .cart a p:first-child img{
     object-fit: cover;
 }
 
+div.content{
+    height: 700px;
+}
+
+
 footer{
-    margin-top: 700px;
     width: 1440px;
     margin: 0 auto;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
 }
 footer ul.footmenu{
     display: flex;
+    padding-bottom: 30px;
+}
+footer ul.footmenu li{
+    flex: 1 1 25%;
+    font-family: NotoSansKR-Regular;
+}
+footer ul.footmenu li p{
+    padding-bottom: 5px;
+}
+footer ul.footmenu li a{
+    display: block;
+    color: #424242;
+}
+footer div.footinfo p{
+    color: #6c6c6c;
+    font-size: 13px;
+    font-family: NotoSansKR-Regular;
 }
