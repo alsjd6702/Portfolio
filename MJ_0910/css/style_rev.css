@@ -16,10 +16,9 @@ div.Con_Top{
     width: 100%;
     height: 100vh;
     background-color: #000;
-    display: flex;
-    justify-content: center;
     overflow: hidden;
     animation: AfterIntroBG 1s ease-in-out 6s forwards;
+    position: relative;
 }
 /* @keyframes AfterIntroBG {
     100%{background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
@@ -45,13 +44,21 @@ div.Con_Top{
     }
 } */
 
-div.Con_Top p{
-    color: #fff;
+div.Con_Top div.Con_Top_Text{
+    width: 100%;
+    height: 100%;    
+    display: flex;
+    justify-content: center;
+    animation: ConTopText 1s ease-in-out 6s forwards;
+}
+@keyframes ConTopText {
+    100%{opacity: 0;}
+}
+
+div.Con_Top div.Con_Top_Text p.Name{
+    width: 60px;
     display: inline-block;
     text-align: center;
-}
-div.Con_Top p.Name{
-    width: 60px;
     font-size: 80px;
     font-weight: bold;    
     color: #fff;
@@ -64,20 +71,20 @@ div.Con_Top p.Name{
     transform-origin: center 0;
 }
 
-div.Con_Top p.Name span:first-of-type{
+div.Con_Top div.Con_Top_Text p.Name span:first-of-type{
     color: rgb(43, 80, 245);
 }
-div.Con_Top p.Name span:nth-of-type(2){
+div.Con_Top div.Con_Top_Text p.Name span:nth-of-type(2){
     color: rgb(241, 229, 53);
 }
-div.Con_Top p.Name span:nth-of-type(3){
+div.Con_Top div.Con_Top_Text p.Name span:nth-of-type(3){
     color: rgb(243, 81, 41);
 }
 @keyframes Name {
     100%{transform: scale(0.1); opacity: 1;}
 }
 
-div.Con_Top div{
+div.Con_Top div.Con_Top_Text div{
     position: absolute;
     animation: AfterIntroOp 1s ease-in-out 6s forwards;
 }
@@ -85,44 +92,44 @@ div.Con_Top div{
     100%{opacity: 0;}
 }
 
-div.Con_Top div.Name_Word1{  
+div.Con_Top div.Con_Top_Text div.Name_Word1{  
     top: -10px;
     left: 908px;
 }
-div.Con_Top div.Name_Word2{
+div.Con_Top div.Con_Top_Text div.Name_Word2{
     top: 239px;
     left: 908px;
 }
-div.Con_Top div.Name_Word3{
+div.Con_Top div.Con_Top_Text div.Name_Word3{
     top: 485px;
     left: 908px;
 }
-div.Con_Top div > span{
+div.Con_Top div.Con_Top_Text div > span{
     position: absolute;
     left: 0;
     top: 0;
     font-size: 80px;
     font-weight: bold;
 }
-div.Con_Top div span.Word_White{
+div.Con_Top div.Con_Top_Text div span.Word_White{
     color: #fff;
     opacity: 0;
     transition: 1s;
     animation: NameWord 1s ease-in-out 3.2s forwards;
 }
-div.Con_Top div.Name_Word1 span.Word_White span,
-div.Con_Top div.Name_Word1 span.Word_Color{
+div.Con_Top div.Con_Top_Text div.Name_Word1 span.Word_White span,
+div.Con_Top div.Con_Top_Text div.Name_Word1 span.Word_Color{
     color: rgb(43, 80, 245);
 }
-div.Con_Top div.Name_Word2 span.Word_White span,
-div.Con_Top div.Name_Word2 span.Word_Color{
+div.Con_Top div.Con_Top_Text div.Name_Word2 span.Word_White span,
+div.Con_Top div.Con_Top_Text div.Name_Word2 span.Word_Color{
     color: rgb(241, 229, 53);
 }
-div.Con_Top div.Name_Word3 span.Word_White span,
-div.Con_Top div.Name_Word3 span.Word_Color{
+div.Con_Top div.Con_Top_Text div.Name_Word3 span.Word_White span,
+div.Con_Top div.Con_Top_Text div.Name_Word3 span.Word_Color{
     color: rgb(243, 81, 41);
 }
-div.Con_Top div span.Word_Color{
+div.Con_Top div.Con_Top_Text div span.Word_Color{
     width: 0;
     overflow: hidden;
     animation: NameWordColor 1s ease-in-out 3.7s forwards;
@@ -133,4 +140,73 @@ div.Con_Top div span.Word_Color{
 }
 @keyframes NameWordColor {
     100%{width: 330px;}
+}
+
+div.Con_Top div.Con_Top_Sign{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div.Con_Top div.Con_Top_Sign span{
+    font-size: 80px;
+    font-weight: bold;
+    position: relative;
+    opacity: 0;
+}
+div.Con_Top div.Con_Top_Sign span:nth-child(1){
+    color: rgb(43, 80, 245);
+    top: -10px;
+    left: 908px;
+    animation: SignMoving1 3s ease-in-out 6.5s forwards;
+}
+div.Con_Top div.Con_Top_Sign span:nth-child(2){
+    color: rgb(241, 229, 53);
+    top: 239px;
+    left: 850px;
+    animation: SignMoving2 3s ease-in-out 6.5s forwards;
+}
+div.Con_Top div.Con_Top_Sign span:nth-child(3){
+    color: rgb(243, 81, 41);
+    top: 485px;
+    left: 780px;
+    animation: SignMoving3 3s ease-in-out 6.5s forwards;
+}
+@keyframes SignMoving1 {
+    0%{font-size: 80px;}
+    5%{opacity: 1;}
+    50%{font-size: 50px;}
+    60%{left: 0; top: 0; font-size: 40px; color: #000;}
+    100%{left: 0; top: 0; font-size: 40px; color: #000; opacity: 0;}
+}
+@keyframes SignMoving2 {
+    0%{font-size: 80px;}
+    5%{opacity: 1;}
+    50%{font-size: 50px;}
+    60%{left: 10px; top: 0; font-size: 40px; color: #000;} 
+    100%{left: 0; top: 0; font-size: 40px; color: #000; opacity: 0;}
+}
+@keyframes SignMoving3 {
+    0%{font-size: 80px;}
+    5%{opacity: 1;}
+    50%{font-size: 50px;}
+    60%{left: 20px; top: 0; font-size: 40px; color: #000;}
+    100%{left: 0; top: 0; font-size: 40px; color: #000; opacity: 0;}
+}
+
+div.Con_Top > p{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 92px;
+    height: 42px;
+}
+div.Con_Top > p img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: ConTopImg 2s ease-in-out 8.5s forwards;
+}
+@keyframes ConTopImg {
+    100%{opacity: 1;}
 }
