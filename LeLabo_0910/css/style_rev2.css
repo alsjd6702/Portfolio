@@ -35,14 +35,15 @@ header{
     width: 100%;
     display: flex;
     position: relative;
+    background: #fff;
 }
 header .logo{
     padding: 0 20px;
     box-sizing: border-box;
     width: 187px;
     height: 82px;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     /* ebebeb */
 }
 header .logo a{
@@ -82,7 +83,7 @@ header nav ul.service li:first-child p img{
 }
 header nav ul.service li:nth-child(2){
     flex: 1 1 13%;
-    border-left: 1px solid #ddd;
+    border-left: 1px solid #eee;
 }
 header nav ul.service li:nth-child(2) a{
     display: flex;
@@ -109,21 +110,17 @@ header nav ul.menu{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    gap: 25px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
-header nav ul.menu > li{    
+header nav ul.menu > li{
+}
+
+header nav ul.menu > li > a{    
     font-family: NotoSansKR-Bold;
     font-size: 14px;
-    padding: 0 10px;
-}
-
-header nav ul.menu > li > a{
-    width: 100%;
-    height: 100%;
-    align-items: center;
 }
 
 header nav ul.menu > li > a:hover{
@@ -135,11 +132,13 @@ header nav ul.menu > li ul.sub{
     width: 100%;
     position: absolute;
     left: 0;
-    top: 80px;
+    top: 82px;
     z-index: 999;
     display: flex;
-    padding: 30px 50px;
-    gap: 60px;
+    padding: 35px 50px;
+    box-sizing: border-box;
+    gap: 60px;    
+    background: #fff;
 }
 
 header nav ul.menu > li ul.sub > li:first-child{
@@ -164,13 +163,12 @@ header nav ul.menu > li ul.sub > li:first-child p{
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 20px 25px;
+    padding: 20px 24.5px;
     box-sizing: border-box;
     color: #fff;
     font-size: 14px;
+    font-family: NotoSansKR-Bold;
 }
-
-
 
 header nav ul.menu > li ul.sub > li:nth-child(2){
     width: 100%;
@@ -203,8 +201,8 @@ header nav ul.menu > li ul.sub > li:nth-child(2) > div > div ul li a{
 header .cart{
     width: 125px;
     height: 81px;
-    border-left: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 header .cart a{
     width: 100%;
