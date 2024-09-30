@@ -127,6 +127,10 @@ header nav ul.menu > li:hover > a{
     border-bottom: 2px solid;
 }
 
+header nav ul.menu > li:hover ul.sub{
+    opacity: 1;
+    z-index: 1;
+}
 
 header nav ul.menu > li ul.sub{
     width: 100%;
@@ -137,14 +141,16 @@ header nav ul.menu > li ul.sub{
     display: flex;
     box-sizing: border-box;
     border-top: 1px solid #eee;
-    gap: 15px; 
     background: #fff;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -1;
 }
 
 header nav ul.menu > li ul.sub > div{
     width: 250px;
     font-size: 0;
-    padding: 35px 0 35px 50px;
+    padding: 35px 15px 35px 50px;
 }
 
 header nav ul.menu > li ul.sub > div a{
@@ -174,14 +180,27 @@ header nav ul.menu > li ul.sub > div a p{
     z-index: 1000;
 }
 
-header nav ul.menu > li ul.sub > li{
+header nav ul.menu > li:nth-child(1) ul.sub > li{
     flex: 0 1 50%;
     display: flex;
 }
 
+header nav ul.menu > li:nth-child(2) ul.sub > li{
+    flex: 0 1 30%;
+    display: flex;
+}
+
+header nav ul.menu > li:nth-child(3) ul.sub > li,
+header nav ul.menu > li:nth-child(6) ul.sub > li,
+header nav ul.menu > li:nth-child(7) ul.sub > li{
+    border-right: 1px solid #eee;
+}
+
 header nav ul.menu > li ul.sub > li > p{
     border-right: 1px solid #eee;
-    padding: 35px 50px;
+    padding: 35px 25px;
+    flex: 0 1 15%;
+    text-align: center;
 }
 
 header nav ul.menu > li ul.sub > li > p a{
@@ -193,8 +212,8 @@ header nav ul.menu > li ul.sub > li > p a:hover{
 }
 
 header nav ul.menu > li ul.sub > li > div{
-    padding: 35px 0 35px 50px;
-    width: 100%;
+    padding: 35px 50px;
+    flex: 0 1 25%;
 }
 
 header nav ul.menu > li ul.sub > li > div > p{
