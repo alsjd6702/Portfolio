@@ -43,7 +43,6 @@ header .logo{
     width: 187px;
     height: 82px;
     border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
     /* ebebeb */
 }
 header .logo a{
@@ -112,18 +111,19 @@ header nav ul.menu{
     align-items: center;
     gap: 25px;
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
 }
 
 header nav ul.menu > li{
+    height: 41px;
 }
 
 header nav ul.menu > li > a{    
     font-family: NotoSansKR-Bold;
     font-size: 14px;
+    line-height: 40px;
 }
 
-header nav ul.menu > li > a:hover{
+header nav ul.menu > li:hover > a{
     border-bottom: 2px solid;
 }
 
@@ -135,82 +135,95 @@ header nav ul.menu > li ul.sub{
     top: 82px;
     z-index: 999;
     display: flex;
-    padding: 35px 50px;
     box-sizing: border-box;
+    border-top: 1px solid #eee;
     gap: 15px; 
     background: #fff;
 }
 
-header nav ul.menu > li ul.sub > li:first-child{
+header nav ul.menu > li ul.sub > div{
     width: 250px;
     font-size: 0;
-    position: relative;
+    padding: 35px 0 35px 50px;
 }
 
-header nav ul.menu > li ul.sub > li:first-child a{
+header nav ul.menu > li ul.sub > div a{
     display: inline-block;
     width: 250px;
     height: 250px;
+    position: relative;
 }
 
-header nav ul.menu > li ul.sub > li:first-child a img{
+header nav ul.menu > li ul.sub > div a img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-header nav ul.menu > li ul.sub > li:first-child p{
+header nav ul.menu > li ul.sub > div a p{
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 20px 24.5px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
     box-sizing: border-box;
     color: #fff;
     font-size: 14px;
     font-family: NotoSansKR-Bold;
+    z-index: 1000;
 }
 
-header nav ul.menu > li ul.sub > li:nth-child(2){
-    width: 100%;
+header nav ul.menu > li ul.sub > li{
+    flex: 0 1 50%;
     display: flex;
 }
 
-header nav ul.menu > li ul.sub > li:nth-child(2) > a{
-    padding: 0 50px;
-    font-family: NotoSansKR-Regular;
+header nav ul.menu > li ul.sub > li > p{
     border-right: 1px solid #eee;
+    padding: 35px 50px;
 }
 
-header nav ul.menu > li ul.sub > li:nth-child(2) > div{
-    padding-left: 50px;
-    flex: 0 1 15%;
-}
-
-header nav ul.menu > li ul.sub > li:nth-child(2) > div > a{
+header nav ul.menu > li ul.sub > li > p a{
     font-family: NotoSansKR-Regular;
 }
 
-header nav ul.menu > li ul.sub > li:nth-child(2) > div > div{
+header nav ul.menu > li ul.sub > li > p a:hover{
+    border-bottom: 2px solid;
+}
+
+header nav ul.menu > li ul.sub > li > div{
+    padding: 35px 0 35px 50px;
+    width: 100%;
+}
+
+header nav ul.menu > li ul.sub > li > div > p{
+    font-family: NotoSansKR-Regular;
+}
+
+header nav ul.menu > li ul.sub > li > div > div{
     display: flex;
     padding-top: 10px;
 }
 
-header nav ul.menu > li ul.sub > li:nth-child(2) > div > div ul{
+header nav ul.menu > li ul.sub > li > div > div ul{
     flex: 1 1 50%;
 }
 
-header nav ul.menu > li ul.sub > li:nth-child(2) > div > div ul li a{
+header nav ul.menu > li ul.sub > li > div > div ul li a{
     line-height: 30px;
     font-family: NotoSansKR-Bold;
     font-size: 13px;
 }
 
+header nav ul.menu > li ul.sub > li > div > div ul li a:hover{
+    border-bottom: 2px solid;
+}
 
 header .cart{
     width: 125px;
     height: 81px;
     border-left: 1px solid #eee;
-    border-bottom: 1px solid #eee;
 }
 header .cart a{
     width: 100%;
