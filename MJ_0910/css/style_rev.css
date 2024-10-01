@@ -86,23 +86,27 @@ div.Con_Top div.Con_Top_Text p.Name span:nth-of-type(3){
 
 div.Con_Top div.Con_Top_Text div{
     position: absolute;
+    left: 50%;
+    top: 0;
     animation: AfterIntroOp 1s ease-in-out 6s forwards;
 }
 @keyframes AfterIntroOp {
     100%{opacity: 0;}
 }
 
-div.Con_Top div.Con_Top_Text div.Name_Word1{  
-    top: -7.5px;
-    left: 504px;
+div.Con_Top div.Con_Top_Text div.Name_Word1{
+    /* top: -7.5px;
+    left: 504px; */
+    top: -1%;
+    transform: translateX(70%);
 }
 div.Con_Top div.Con_Top_Text div.Name_Word2{
-    top: 239px;
-    left: 742.5px;
+    /* top: 239px;
+    left: 742.5px; */
 }
 div.Con_Top div.Con_Top_Text div.Name_Word3{
-    top: 485px;
-    left: 911px;
+    /* top: 485px;
+    left: 911px; */
 }
 div.Con_Top div.Con_Top_Text div > span{
     position: absolute;
