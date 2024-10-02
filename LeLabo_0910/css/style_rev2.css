@@ -81,7 +81,7 @@ header nav ul.service li:first-child p img{
     cursor: pointer;
 }
 header nav ul.service li:nth-child(2){
-    flex: 1 1 13%;
+    flex: 1 1 15%;
     border-left: 1px solid #eee;
 }
 header nav ul.service li:nth-child(2) a{
@@ -291,27 +291,52 @@ div.content div.main p img{
 }
 
 div.content div.btn{
+    width: 100%;
+    max-width: 1070px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
     display: flex;
+    gap: 50px;
+    justify-content: space-between;
 }
 div.content div.btn div{
     color: #fff;
+    width: 284px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+}
+div.content div.btn div h2:nth-child(2){
+    line-height: 35px;
+    font-weight: 500;    
+}
+div.content div.btn div p{
+    font-size: 15px;
+    font-family: SangSangClover_Regular;
+    line-height: 20px;
+    padding-bottom: 5px;
+    word-break: keep-all;
+}
+div.content div.btn div a{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    opacity: 0;
 }
 
 footer{
-    width: 1440px;
+    width: 100%;
+    max-width: 1410px;
+    padding: 0 20px;
     margin: 0 auto;
-    padding: 20px 30px;
     box-sizing: border-box;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
 }
 footer ul.footmenu{
     display: flex;
-    padding-bottom: 30px;
+    padding-bottom: 30px;    
+    padding: 20px 30px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
 }
 footer ul.footmenu li{
     flex: 1 1 25%;
@@ -323,8 +348,29 @@ footer ul.footmenu li p{
 footer ul.footmenu li a{
     color: #424242;
 }
+footer div.footinfo{    
+    padding: 0 0 50px 30px;
+}
 footer div.footinfo p{
     color: #6c6c6c;
     font-size: 13px;
     font-family: NotoSansKR-Regular;
+}
+
+@media (max-width: 1200px) {
+    header nav ul.service li:nth-child(2){
+        flex: 1 1 5%;
+    }
+    header nav ul.service li:nth-child(2) a p:nth-child(2){
+        display: none;
+    }
+    header nav ul.menu > li > a{    
+        font-size: 12px;
+    }
+    footer ul.footmenu li p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 1024px) {
+    
 }
