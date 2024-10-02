@@ -314,6 +314,15 @@ div.contents div.contentmenu div.conmenubtn div.btn:nth-child(3) p:first-child{
 div.contents div.contentmenu div.conmenubtn div.btn:nth-child(4) p:first-child{
     background-position: -138px -7px;
 }
+div.contents div.contentmenu div.conmenubtn div.btn:nth-child(5) p:first-child{
+    background-position: -215px -5px;
+}
+div.contents div.contentmenu div.conmenubtn div.btn:nth-child(6) p:first-child{
+    background-position: -287px 0;
+}
+div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7) p:first-child{
+    background-position: -347px -12px;
+}
 div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
     color: #fff;
 }
