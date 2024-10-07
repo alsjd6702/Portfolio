@@ -145,6 +145,7 @@ header nav ul.menu > li ul.sub li a{
     line-height: 35px;
     font-family: high1WonchuriBodyR;
     color: #000;
+    font-size: 16px;
 }
 header nav ul.menu > li:nth-child(1) ul.sub li:first-child a,
 header nav ul.menu > li:nth-child(2) ul.sub li:first-child a,
@@ -191,7 +192,9 @@ div.contents div.info div.main_bg p img{
 
 .swiper{
     width: 100%;
-    height: 100%;
+    height: 100%;    
+    margin-left: auto;
+    margin-right: auto;
 }
 .swiper-slide{
     text-align: center;
@@ -207,9 +210,14 @@ div.contents div.info div.main_bg p img{
     height: 100%;
     object-fit: cover;
 }
-.swiper{
-    margin-left: auto;
-    margin-right: auto;
+.swiper-pagination-bullet{
+    width: 17px;
+    height: 17px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.5);
+}
+.swiper-pagination-bullet-active {
+    background: #007aff;
 }
 
 div.contents div.maincontent{
@@ -259,6 +267,7 @@ div.contents div.maincontent div.notice ul.noticesub li{
 }
 div.contents div.maincontent div.notice ul.noticesub li p{
     font-family: high1WonchuriBodyR;
+    font-size: 16px;
 }
 div.contents div.maincontent div.notice ul.noticesub li a:hover > p{
     font-weight: bold;
@@ -304,7 +313,7 @@ div.contents div.maincontent div.event ul.eventsub li div.imgbox{
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 div.contents div.maincontent div.event ul.eventsub li div.imgbox::before{
     content: "";
@@ -344,6 +353,7 @@ div.contents div.maincontent div.event ul.eventsub li:hover div.imgbox p.blurbox
 div.contents div.maincontent div.event ul.eventsub li p.eventtxt{
     font-family: high1WonchuriBodyR;
     line-height: 25px;
+    font-size: 16px;
 }
 div.contents div.maincontent div.event ul.eventsub li:hover p.eventtxt{
     font-weight: bold;
@@ -371,7 +381,7 @@ div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt{
 }
 div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt > p{
     font-family: high1WonchuriBodyR;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     color: #fff;
 }
@@ -380,6 +390,7 @@ div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt > h1{
     padding: 20px 0 70px;
     text-align: center;
     color: #fff;
+    font-size: 35px;
 }
 div.contents div.contentmenu div.conmenubtn{
     display: flex;
@@ -465,6 +476,7 @@ div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7){
 div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
     color: #fff;
     font-family: high1WonchuriBodyR;
+    font-size: 16px;
 }
 div.contents div.contentmenu div.conmenubtn div.btn:hover p:nth-child(2){
     font-weight: bold;
@@ -488,6 +500,7 @@ div.contents div.contentinfo div h2{
 div.contents div.contentinfo div p{
     font-family: high1WonchuriBodyR;
     padding: 10px 0 0;
+    font-size: 16px;
 }
 div.contents div.contentinfo div.sns p{
     font-family: high1WonchuriBodyR;
