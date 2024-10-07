@@ -223,6 +223,11 @@ div.contents div.maincontent div.notice > p::after{
     transform: translateY(-20%);
     cursor: pointer;
 }
+/* div.contents div.maincontent div.notice > p:hover::after{
+    color: #fff;
+    background: #452b50;
+    border: 1px solid #452b50;
+} */
 div.contents div.maincontent div.notice ul.noticesub li{
     display: flex;
     justify-content: space-between;
@@ -230,6 +235,12 @@ div.contents div.maincontent div.notice ul.noticesub li{
 }
 div.contents div.maincontent div.notice ul.noticesub li p{
     font-family: high1WonchuriBodyR;
+}
+div.contents div.maincontent div.notice ul.noticesub li a:hover > p{
+    font-weight: bold;
+}
+div.contents div.maincontent div.notice ul.noticesub li a:hover ~ p{
+    font-weight: bold;
 }
 
 div.contents div.maincontent div.event{
@@ -260,7 +271,6 @@ div.contents div.maincontent div.event ul.eventsub{
     width: 100%;
     display: flex;
     gap: 10px;
-
 }
 div.contents div.maincontent div.event ul.eventsub li{
     cursor: pointer;
@@ -277,6 +287,10 @@ div.contents div.maincontent div.event ul.eventsub li p.eventtxt{
     font-family: high1WonchuriBodyR;
     line-height: 25px;
 }
+div.contents div.maincontent div.event ul.eventsub li:hover p.eventtxt{
+    font-weight: bold;
+}
+
 div.contents div.contentmenu{
     width: 100%;
     background: rgb(51, 51, 51);
@@ -330,24 +344,32 @@ div.contents div.contentmenu div.conmenubtn div.btn::after{
     border-radius: 50%;
     position: absolute;
     left: 50%;
-    transform: translate(-51%,-33%);    
+    transform: translate(-51%,-33%);
+    animation: moving 0.7s ease-in-out alternate infinite;
 }
 div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7):after{    
-    transform: translate(-51%,-50%);    
+    transform: translate(-51%,-33%);    
 }
 div.contents div.contentmenu div.conmenubtn div.btn p:first-child{
     padding-bottom: 50px;
     background-image: url(/High1_0911/High1_images/conmenubtn.png);
     background-repeat: no-repeat;
+    position: relative;
+    animation: moving 0.7s ease-in-out alternate infinite;
 }
+@keyframes moving {
+    0%{top: -2px;}
+    100%{top: 2px;}
+}
+
 div.contents div.contentmenu div.conmenubtn div.btn:first-child p:first-child{
     background-position: -411px -4px;
     width: 33px;
     height: 43px;
 }
 div.contents div.contentmenu div.conmenubtn div.btn:nth-child(2) p:first-child{
-    background-position: 0 -10px;
-    width: 23px;
+    background-position: 0 -7px;
+    width: 25px;
     height: 43px;
 }
 div.contents div.contentmenu div.conmenubtn div.btn:nth-child(3) p:first-child{
@@ -366,8 +388,8 @@ div.contents div.contentmenu div.conmenubtn div.btn:nth-child(5) p:first-child{
     height: 43px;
 }
 div.contents div.contentmenu div.conmenubtn div.btn:nth-child(6) p:first-child{
-    background-position: -287px 0;
-    width: 28px;
+    background-position: -285px -5px;
+    width: 30px;
     height: 43px;
     position: relative;
     top: -5px;
@@ -375,16 +397,19 @@ div.contents div.contentmenu div.conmenubtn div.btn:nth-child(6) p:first-child{
 div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7) p:first-child{
     background-position: -347px -12px;    
     width: 36px;
-    height: 25px;
+    height: 30px;
     position: relative;
     top: -7px;
 }
 div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7){
-    padding-top: 18px;
+    padding-top: 11px;
 }
 div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
     color: #fff;
     font-family: high1WonchuriBodyR;
+}
+div.contents div.contentmenu div.conmenubtn div.btn:hover p:nth-child(2){
+    font-weight: bold;
 }
 div.contents div.contentinfo{
     width: 100%;
@@ -420,6 +445,10 @@ div.contents div.contentinfo div.sns div.snsimg p{
     background-image: url(/High1_0911/High1_images//sns.png);
     background-repeat: no-repeat;
     cursor: pointer;
+    position: relative;
+}
+div.contents div.contentinfo div.sns div.snsimg p:hover{
+    top: -5px;
 }
 div.contents div.contentinfo div.sns div.snsimg p:first-child{
     background-position: -160px 0;
@@ -447,6 +476,13 @@ div.contents div.contentinfo div.weather div.weatherimg p:nth-child(2){
     padding-left: 20px;
     box-sizing: border-box;    
     cursor: pointer;
+}
+div.contents div.contentinfo div.weather div.weatherimg:hover p img{
+    animation: rotate 1.5s linear infinite;
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
 }
 
 footer{
