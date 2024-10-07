@@ -273,16 +273,50 @@ div.contents div.maincontent div.event ul.eventsub{
     gap: 10px;
 }
 div.contents div.maincontent div.event ul.eventsub li{
+    flex: 1 1 30%;
     cursor: pointer;
 }
-div.contents div.maincontent div.event ul.eventsub li p:first-child{
+div.contents div.maincontent div.event ul.eventsub li div.imgbox{
     width: 100%;
-    padding-bottom: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5px;
 }
-div.contents div.maincontent div.event ul.eventsub li p:first-child img{
+div.contents div.maincontent div.event ul.eventsub li div.imgbox::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(225,255,255,0.7);
     width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+div.contents div.maincontent div.event ul.eventsub li div.imgbox img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: -7px center;
 }
+div.contents div.maincontent div.event ul.eventsub li div.imgbox > img{
+    filter: blur(10px);
+}
+div.contents div.maincontent div.event ul.eventsub li div.imgbox p.blurbox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: 0.5s;
+    clip-path: inset(0);
+    z-index: 2;
+}
+div.contents div.maincontent div.event ul.eventsub li:hover div.imgbox p.blurbox{
+    clip-path: inset(5px round 90px 90px 50px 50px);
+}
+
 div.contents div.maincontent div.event ul.eventsub li p.eventtxt{
     font-family: high1WonchuriBodyR;
     line-height: 25px;
