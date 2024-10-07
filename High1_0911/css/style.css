@@ -48,21 +48,25 @@ header div.top{
 header:hover div.top{
     background: rgba(206, 206, 206, 0.9);
 }
-header:hover div.top ul li a{
-    color: #000;
-}
 header div.top ul.left,
 header div.top ul.right{
     display: flex;
     gap: 20px;
 }
-header div.top li{
+header div.top ul li{
     font-size: 0;
 }
-header div.top a{
+header div.top ul li a{
     font-family: high1WonchuriBodyR;
     font-size: 15px;
     color: #fff;
+}
+header:hover div.top ul li a{
+    color: #000;
+}
+header div.top ul li:hover a{
+    font-weight: bold;
+    color: #452b50
 }
 header nav{
     width: 100%;
@@ -78,7 +82,7 @@ header:hover nav{
     background: rgba(206, 206, 206, 0.9);
 }
 header:hover nav > a img{
-    object-position: center bottom;
+    object-position: center -49px;
 }
 header nav > a{
     display: inline-block;
@@ -120,6 +124,10 @@ header nav ul.menu > li:nth-child(6) > a,
 header nav ul.menu > li:nth-child(7) > a{
     line-height: 44px;
 }
+header nav ul.menu > li:hover > a{
+    color: #452b50;
+    border-bottom: 2px solid #452b50;
+}
 header nav ul.menu > li ul.sub{
     position: absolute;
     left: 0;
@@ -149,6 +157,7 @@ header nav ul.menu > li:nth-child(7) ul.sub li:first-child a{
 }
 header nav ul.menu > li ul.sub li:hover a{
     font-weight: bold;
+    color: #452b50;
 }
 
 header nav div.bg{
@@ -375,6 +384,7 @@ div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7){
 }
 div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
     color: #fff;
+    font-family: high1WonchuriBodyR;
 }
 div.contents div.contentinfo{
     width: 100%;
