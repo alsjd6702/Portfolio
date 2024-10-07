@@ -392,8 +392,8 @@ div.contents div.contentmenu div.conmenubtn div.btn p:first-child{
     animation: moving 0.7s ease-in-out alternate infinite;
 }
 @keyframes moving {
-    0%{top: -2px;}
-    100%{top: 2px;}
+    0%{top: -3px;}
+    100%{top: 3px;}
 }
 
 div.contents div.contentmenu div.conmenubtn div.btn:first-child p:first-child{
