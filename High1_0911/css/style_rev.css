@@ -97,7 +97,7 @@ header nav > a img{
 }
 header nav ul.menu{
     display: flex;
-    width: 100%;
+    flex: 1 1 100%;
     height: 73px;
 }
 header nav ul.menu > li{    
@@ -166,7 +166,7 @@ header nav div.bg{
     left: 0;
     top: 73px;
     width: 100%;
-    background: rgba(206, 206, 206, 0.9);
+    background: rgba(236, 236, 236, 0.9);
     height: 0;
     transition: 0.3s;    
     /* 400px */
@@ -177,18 +177,11 @@ header nav ul.menu:hover > li ul.sub{
 header nav ul.menu:hover ~ div.bg{
     height: 400px;
 }
+
 div.contents div.info{
     position: relative;
     top: -113px;
 }
-
-/* div.contents div.info div.main_bg{
-    width: 100%;
-}
-div.contents div.info div.main_bg p img{
-    width: 100%;
-    object-fit: cover;
-} */
 
 .swiper{
     width: 100%;
@@ -227,7 +220,7 @@ div.contents div.maincontent{
     padding: 0 50px;
     box-sizing: border-box;
     position: relative;
-    top: -70px;
+    top: -60px;
     display: flex;
     justify-content: space-between;
 }
@@ -265,15 +258,24 @@ div.contents div.maincontent div.notice ul.noticesub li{
     justify-content: space-between;
     padding-bottom: 20px;
 }
-div.contents div.maincontent div.notice ul.noticesub li p{
-    font-family: high1WonchuriBodyR;
-    font-size: 16px;
+div.contents div.maincontent div.notice ul.noticesub li a{
+    flex: 1 1 70%;
+}
+div.contents div.maincontent div.notice ul.noticesub li a p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 95%;
 }
 div.contents div.maincontent div.notice ul.noticesub li a:hover > p{
     font-weight: bold;
 }
 div.contents div.maincontent div.notice ul.noticesub li a:hover ~ p{
     font-weight: bold;
+}
+div.contents div.maincontent div.notice ul.noticesub li p{
+    font-family: high1WonchuriBodyR;
+    font-size: 16px;
 }
 
 div.contents div.maincontent div.event{
@@ -397,6 +399,10 @@ div.contents div.contentmenu div.conmenubtn{
     justify-content: center;
     gap: 10px;
 }
+div.contents div.contentmenu div.conmenubtn > div{
+    display: flex;
+    gap: 10px;
+}
 div.contents div.contentmenu div.conmenubtn div.btn{
     display: flex;
     flex-direction: column;
@@ -416,7 +422,7 @@ div.contents div.contentmenu div.conmenubtn div.btn::after{
     transform: translate(-51%,-33%);
     animation: moving 0.7s ease-in-out alternate infinite;
 }
-div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7):after{    
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(4):after{    
     transform: translate(-51%,-33%);    
 }
 div.contents div.contentmenu div.conmenubtn div.btn p:first-child{
@@ -431,46 +437,46 @@ div.contents div.contentmenu div.conmenubtn div.btn p:first-child{
     100%{top: 3px;}
 }
 
-div.contents div.contentmenu div.conmenubtn div.btn:first-child p:first-child{
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_top div.btn:first-child p:first-child{
     background-position: -411px -4px;
     width: 33px;
     height: 43px;
 }
-div.contents div.contentmenu div.conmenubtn div.btn:nth-child(2) p:first-child{
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_top div.btn:nth-child(2) p:first-child{
     background-position: 0 -7px;
     width: 25px;
     height: 43px;
 }
-div.contents div.contentmenu div.conmenubtn div.btn:nth-child(3) p:first-child{
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_top div.btn:nth-child(3) p:first-child{
     background-position: -70px -4px;
     width: 27px;
     height: 43px;
 }
-div.contents div.contentmenu div.conmenubtn div.btn:nth-child(4) p:first-child{
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:first-child p:first-child{
     background-position: -138px -7px;
     width: 36px;
     height: 43px;
 }
-div.contents div.contentmenu div.conmenubtn div.btn:nth-child(5) p:first-child{
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(2) p:first-child{
     background-position: -215px -5px;
     width: 27px;
     height: 43px;
 }
-div.contents div.contentmenu div.conmenubtn div.btn:nth-child(6) p:first-child{
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(3) p:first-child{
     background-position: -285px -5px;
     width: 30px;
     height: 43px;
     position: relative;
     top: -5px;
 }
-div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7) p:first-child{
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(4) p:first-child{
     background-position: -347px -12px;    
     width: 36px;
     height: 30px;
     position: relative;
     top: -7px;
 }
-div.contents div.contentmenu div.conmenubtn div.btn:nth-child(7){
+div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(4){
     padding-top: 11px;
 }
 div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
@@ -481,6 +487,7 @@ div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
 div.contents div.contentmenu div.conmenubtn div.btn:hover p:nth-child(2){
     font-weight: bold;
 }
+
 div.contents div.contentinfo{
     width: 100%;
     max-width: 1600px;
@@ -496,6 +503,7 @@ div.contents div.contentinfo div{
 }
 div.contents div.contentinfo div h2{
     font-family: high1WonchuriTitleM;
+    font-weight: normal;
 }
 div.contents div.contentinfo div p{
     font-family: high1WonchuriBodyR;
@@ -615,6 +623,279 @@ footer div.foottxt p:last-child{
     text-transform: uppercase;
 }
 
-@media (max-width: 1280px) {
-    
+
+@media (max-width: 1400px){
+    header nav{
+        gap: 5%;
+    }
+    header nav ul.menu > li{
+        width: 13.5%;
+    }
+    header nav ul.menu > li > a{
+        font-size: 17px;
+    }
+    .swiper-pagination-bullet{
+        width: 15px;
+        height: 15px;
+    }
+}
+@media (max-width: 1280px){
+    header nav ul.menu > li > a{
+        font-size: 16px;
+    }
+    header nav ul.menu > li ul.sub li a{
+        font-size: 15px;
+    }
+    div.contents div.maincontent div.notice{
+        width: 40%;
+    }
+    div.contents div.maincontent div.event{
+        width: 55%;
+    }
+    div.contents div.maincontent div.event ul.eventsub li{
+        flex: 1 1 40%;
+    }
+    div.contents div.maincontent div.event ul.eventsub li:last-child{
+        display: none;
+    }
+}
+@media (max-width: 1150px){
+    div.contents div.contentmenu div.conmenubtn{
+        flex-direction: column;
+        align-items: center;
+    }
+    div.contents div.contentmenu div.conmenubtn div.conmenubtn_top{
+        padding-bottom: 70px;
+    }
+}
+@media (max-width: 1080px){
+    header div.top ul li a{
+        font-size: 14px;
+    }
+    header nav ul.menu > li > a{
+        font-size: 15px;
+    }
+    header nav ul.menu > li ul.sub li a{
+        font-size: 14px;
+    }
+    .swiper-pagination-bullet{
+        width: 13px;
+        height: 13px;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li{
+        padding-bottom: 15px;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li p{
+        font-size: 15px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li div.imgbox{
+        margin-bottom: 5px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li p.eventtxt{
+        font-size: 15px;
+    }
+    div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt > p{
+        font-size: 18px;
+    }
+    div.contents div.contentmenu div.contentmenu_bg div.contentmenu_txt > h1{
+        font-size: 30px;
+        padding: 20px 0 50px;
+    }
+    div.contents div.contentmenu div.conmenubtn{
+        gap: 0;
+    }
+    div.contents div.contentmenu div.conmenubtn div.conmenubtn_top{
+        padding-bottom: 60px;
+    }
+    div.contents div.contentmenu div.conmenubtn div.btn::after{
+        width: 80px;
+        height: 80px;
+        transform: translate(-52%,-29%);
+    }
+    div.contents div.contentmenu div.conmenubtn div.conmenubtn_bottom div.btn:nth-child(4):after{
+        transform: translate(-51%,-29%);
+    }
+    div.contents div.contentmenu div.conmenubtn div.btn p:first-child{
+        padding-bottom: 30px;
+    }
+    footer{
+        padding: 30px 0 50px;
+    }
+    footer div.foottxt p:first-child{        
+        margin-bottom: 20px;
+    }
+    footer div.foottxt div.footmenu{
+        padding: 20px 0;
+    }
+    footer div.foottxt div.footinfo{
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 0;
+    }
+    footer div.foottxt p:last-child{
+        padding: 0;
+    }
+}
+@media (max-width: 994px){
+    header div.top ul.left,
+    header div.top ul.right{
+        gap: 10px;
+    }
+    header div.top ul li a{
+        font-size: 13px;
+    }
+/* 메뉴 */
+
+    div.contents div.maincontent{
+        top: -70px;
+    }
+    div.contents div.maincontent div.notice > p{
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li{        
+        padding-bottom: 12px;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li a{
+        flex: 0 0;
+        width: 70%;
+    }
+    div.contents div.maincontent div.notice ul.noticesub li a p{
+        width: 100%;
+    }
+    div.contents div.maincontent div.event > p{
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li p.eventtxt{
+        line-height: 22px;
+    }
+    div.contents div.contentmenu{
+        position: relative;
+        top: -30px;
+    }
+    div.contents div.contentmenu div.conmenubtn div.btn p:nth-child(2){
+        font-size: 15px;
+    }
+    div.contents div.contentinfo{
+        padding: 0 50px;
+        position: relative;
+        top: -10px;
+    }
+    div.contents div.contentinfo div h2{
+        font-size: 18px;
+    }
+    div.contents div.contentinfo div p{
+        font-size: 15px;
+    }
+}
+@media (max-width: 914px){
+    div.contents div.maincontent div.notice ul.noticesub li a{
+        width: 60%;
+    }
+}
+@media (max-width: 814px){
+    .swiper-pagination-bullet{
+        width: 10px;
+        height: 10px;
+    }
+    div.contents div.maincontent{
+        flex-direction: column;        
+        top: -80px;
+    }
+    div.contents div.maincontent div.notice{
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    div.contents div.maincontent div.event{
+        width: 100%;
+    }
+    div.contents div.maincontent div.event > p{
+        padding-bottom: 20px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li:last-child{
+        display: block;
+    }
+    div.contents div.contentmenu{
+        top: -40px;
+    }
+    div.contents div.contentinfo{
+        top: -15px;
+    }
+}
+@media (max-width: 714px){
+    header div.top{
+        padding: 0 10px;
+    }
+    header div.top ul.left,
+    header div.top ul.right{
+        gap: 8px;
+    }
+    header div.top ul li a{
+        font-size: 12px;
+    }
+    div.contents div.maincontent{
+        padding: 0 30px;
+    }
+    div.contents div.maincontent div.event ul.eventsub li:last-child{
+        display: none;
+    }
+    div.contents div.maincontent div.event ul.eventsub li div.imgbox{        
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 612px) {
+    /* 메뉴 상단 */
+    div.swiper-button-next::after,
+    div.swiper-button-prev::after{
+        font-size: 25px;
+    }
+    .swiper-pagination-bullet{
+        width: 8px;
+        height: 8px;
+    }
+    div.contents div.contentmenu div.conmenubtn > div{
+        gap: 0;
+    }
+    div.contents div.contentmenu div.conmenubtn div.btn{
+        width: 120px;
+    }
+    div.contents div.contentinfo{        
+        padding: 20px;
+    }
+    div.contents div.contentinfo div.sns > p{
+        font-size: 14px;
+    }
+    div.contents div.contentinfo div.weather div.weatherimg p:first-child img{
+        width: 60px;
+    }
+    div.contents div.contentinfo div.weather div.weatherimg p:nth-child(2){
+        font-size: 25px;
+    }
+    footer{
+        padding: 20px 0 30px;
+    }
+    footer div.foottxt{        
+        padding: 0 20px;
+    }
+    footer div.foottxt p:first-child{
+        width: 120px;
+        height: 52px;
+        margin-bottom: 10px;
+    }
+    footer div.foottxt div.footmenu{
+        padding: 10px 0;
+    }
+    footer div.foottxt div.footmenu a{
+        font-size: 13px;
+    }
+    footer div.foottxt div.footinfo{
+        padding: 10px 0;
+    }
+    footer div.foottxt div.footinfo ul li{
+        font-size: 13px;
+    }
+    footer div.foottxt p:last-child{
+        font-size: 13px;
+    }
 }
