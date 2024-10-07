@@ -180,12 +180,36 @@ div.contents div.info{
     position: relative;
     top: -113px;
 }
-div.contents div.info div.main_bg{
+
+/* div.contents div.info div.main_bg{
     width: 100%;
 }
 div.contents div.info div.main_bg p img{
     width: 100%;
     object-fit: cover;
+} */
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper{
+    margin-left: auto;
+    margin-right: auto;
 }
 
 div.contents div.maincontent{
