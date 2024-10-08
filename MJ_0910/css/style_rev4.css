@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 *{
     margin: 0;
     padding: 0;
@@ -10,39 +12,72 @@ a{
     color: #333;
 }
 
-#menu{
+div.Above{
     position: fixed;
     top: 0;
-    z-index: 9999;
-    display: flex;
-}
-.myContent{
-    height: 300px;
-}
-
-div.Con_Top{
+    z-index: 999;
     width: 100%;
     height: 100vh;
     background-color: #000;
     overflow: hidden;
     animation: AfterIntroBG 1s ease-in-out 6s forwards;
-    position: relative;
 }
 @keyframes AfterIntroBG {
-    100%{background-image: linear-gradient(to top, #4481eb 0%, #66a6ff 100%);}
+    100%{background: transparent;}
+}
+div.Above div.btn{
+    position: absolute;
+    left: 0;
+    top: 0;    
+    padding: 10px;
+    opacity: 0;
+    animation: btn 2s ease-in-out 6.5s forwards;    
+    z-index: 9999;
+}
+@keyframes btn {
+    100%{opacity: 1;}
+}
+div.Above div.btn > p.Sign_Img{
+    width: 92px;
+    height: 42px;
+    padding: 10px;
+}
+div.Above div.btn > p.Sign_Img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.Above div.btn ul#menu{
+    padding: 0 0 0 10px;
+}
+div.Above div.btn ul#menu li{
+    padding: 5px 0;
+}
+div.Above div.btn ul#menu li a{
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+div.Above div.btn ul#menu li a:hover{
+    color: rgb(0, 225, 255);
 }
 
-div.Con_Top div.Con_Top_Text{
+div.Above div.Con_Top div.Con_Top_Text{
     width: 100%;
     height: 100%;    
     display: flex;
     justify-content: center;
+    animation: ConTopText 1s ease-in-out 6s forwards;
 }
-div.Con_Top div.Con_Top_Text p.Name{
-    width: 60px;
+@keyframes ConTopText {
+    100%{opacity: 0;}
+}
+div.Above div.Con_Top div.Con_Top_Text p.Name{
+    width: 58px;
     display: inline-block;
     text-align: center;
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;    
     color: #fff;
     word-wrap: break-word;
@@ -53,6 +88,9 @@ div.Con_Top div.Con_Top_Text p.Name{
     opacity: 0;
     transform-origin: center 0;
 }
+@keyframes Name {
+    100%{transform: scale(0.1); opacity: 1;}
+}
 div.Con_Top div.Con_Top_Text p.Name span:first-of-type{
     color: rgb(43, 80, 245);
 }
@@ -61,9 +99,6 @@ div.Con_Top div.Con_Top_Text p.Name span:nth-of-type(2){
 }
 div.Con_Top div.Con_Top_Text p.Name span:nth-of-type(3){
     color: rgb(243, 81, 41);
-}
-@keyframes Name {
-    100%{transform: scale(0.1); opacity: 1;}
 }
 
 div.Con_Top div.Con_Top_Text div{
@@ -75,27 +110,24 @@ div.Con_Top div.Con_Top_Text div{
 @keyframes AfterIntroOp {
     100%{opacity: 0;}
 }
-
 div.Con_Top div.Con_Top_Text div.Name_Word1{
-    /* top: -7.5px;
-    left: 504px; */
-    top: -1%;
-    transform: translateX(70%);
+    top: px;
+    left: 578px;
 }
 div.Con_Top div.Con_Top_Text div.Name_Word2{
-    /* top: 239px;
-    left: 742.5px; */
+    top: 246px;
+    left: 785px;
 }
 div.Con_Top div.Con_Top_Text div.Name_Word3{
-    /* top: 485px;
-    left: 911px; */
+    top: 492px;
+    left: 935px;
 }
 
 div.Con_Top div.Con_Top_Text div > span{
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 80px;
+    font-size: 70px;
     font-weight: bold;
 }
 div.Con_Top div.Con_Top_Text div span.Word_White{
@@ -103,6 +135,17 @@ div.Con_Top div.Con_Top_Text div span.Word_White{
     opacity: 0;
     transition: 1s;
     animation: NameWord 1s ease-in-out 3.2s forwards;
+}
+@keyframes NameWord {
+    100%{opacity: 1;}
+}
+div.Con_Top div.Con_Top_Text div span.Word_Color{
+    width: 0;
+    overflow: hidden;
+    animation: NameWordColor 1s ease-in-out 3.7s forwards;
+}
+@keyframes NameWordColor {
+    100%{width: 500px;}
 }
 div.Con_Top div.Con_Top_Text div.Name_Word1 span.Word_White span,
 div.Con_Top div.Con_Top_Text div.Name_Word1 span.Word_Color{
@@ -116,33 +159,34 @@ div.Con_Top div.Con_Top_Text div.Name_Word3 span.Word_White span,
 div.Con_Top div.Con_Top_Text div.Name_Word3 span.Word_Color{
     color: rgb(243, 81, 41);
 }
-div.Con_Top div.Con_Top_Text div span.Word_Color{
-    width: 0;
-    overflow: hidden;
-    animation: NameWordColor 1s ease-in-out 3.7s forwards;
-}
-@keyframes NameWord {
-    100%{opacity: 1;}
-}
-@keyframes NameWordColor {
-    100%{width: 500px;}
-}
 
-div.Con_Top > p{
+div.Above div.After_Intro_Name{
     position: absolute;
     left: 0;
     top: 0;
-    width: 92px;
-    height: 42px;
-    padding: 10px;
-}
-div.Con_Top > p img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 100%;    
+    display: flex;
+    justify-content: center;    
     opacity: 0;
-    animation: ConTopImg 2s ease-in-out 6.5s forwards;
+    animation: AfterIntroName 1s ease-in-out 6s forwards;
 }
-@keyframes ConTopImg {
+@keyframes AfterIntroName {
     100%{opacity: 1;}
 }
+div.Above div.After_Intro_Name p.Intro_Name{
+    width: 58px;
+    display: inline-block;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;    
+    color: #fff;
+    word-wrap: break-word;
+    line-height: 82px;
+    padding-top: 10px;
+}
+
+.myContent{
+    height: 300px;
+}
+
