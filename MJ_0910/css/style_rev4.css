@@ -314,8 +314,16 @@ div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 35%;
+    bottom: 50%;
 }
 div#fullpage div#section0 div.Intro_Left div.Intro_Txt p{
-    line-height: 25px;
+    line-height: 30px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 400;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Txt p span{
+    font-weight: 500;
 }
