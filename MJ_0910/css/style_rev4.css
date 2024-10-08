@@ -290,11 +290,11 @@ div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
     position: absolute;
     width: 30%;
     left: 35%;
-    top: 50px;
+    top: 80px;
 }
 div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
     left: 39%;
-    top: 80px;
+    top: 110px;
     border-radius: 50%;
     box-shadow: 0px 0px 70px rgba(255,255,255,0.5);
 }
@@ -314,16 +314,25 @@ div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 50%;
+    bottom: 13%;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #fff;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Txt h1{
+    text-align: center;
+    padding-bottom: 20px;
 }
 div#fullpage div#section0 div.Intro_Left div.Intro_Txt p{
-    line-height: 30px;
-    font-family: "Noto Sans KR", sans-serif;
     font-size: 20px;
-    letter-spacing: 1px;
-    color: #fff;
     font-weight: 400;
 }
 div#fullpage div#section0 div.Intro_Left div.Intro_Txt p span{
     font-weight: 500;
+}
+
+div#fullpage div#section0 div.Intro_Right{
+    width: 100%;
+    height: 100%;
 }
