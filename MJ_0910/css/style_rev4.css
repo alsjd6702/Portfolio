@@ -18,9 +18,9 @@ div.Above{
     z-index: 999;
     width: 100%;
     height: 100vh;
-    background-color: #000;
+    /* background-color: #000; */
     overflow: hidden;
-    animation: AfterIntroBG 1s ease-in-out 6s forwards;
+    /* animation: AfterIntroBG 1s ease-in-out 6s forwards; */
 }
 @keyframes AfterIntroBG {
     100%{background: transparent;}
@@ -30,8 +30,8 @@ div.Above div.btn{
     left: 0;
     top: 0;    
     padding: 10px;
-    opacity: 0;
-    animation: btn 2s ease-in-out 6.5s forwards;    
+    /* opacity: 0; */
+    /* animation: btn 2s ease-in-out 6.5s forwards;     */
     z-index: 9999;
 }
 @keyframes btn {
@@ -68,13 +68,13 @@ div.Above div.Con_Top div.Con_Top_Text{
     height: 100%;    
     display: flex;
     justify-content: center;
-    animation: ConTopText 1s ease-in-out 6s forwards;
+    /* animation: ConTopText 1s ease-in-out 6s forwards; */
 }
 @keyframes ConTopText {
     100%{opacity: 0;}
 }
 div.Above div.Con_Top div.Con_Top_Text p.Name{
-    width: 58px;
+    width: 40px;
     display: inline-block;
     text-align: center;
     font-size: 70px;
@@ -82,11 +82,12 @@ div.Above div.Con_Top div.Con_Top_Text p.Name{
     color: #fff;
     word-wrap: break-word;
     line-height: 82px;
-    padding-top: 10px;
-    animation: Name 2s ease-in-out 1.5s forwards;
-    scale: 10;
+    padding-top: 25px;
+    /* animation: Name 2s ease-in-out 1.5s forwards;
+    scale: 10; */
     opacity: 0;
     transform-origin: center 0;
+    font-family: "Bebas Neue", sans-serif;
 }
 @keyframes Name {
     100%{transform: scale(0.1); opacity: 1;}
@@ -105,10 +106,13 @@ div.Con_Top div.Con_Top_Text div{
     position: absolute;
     left: 50%;
     top: 0;
-    animation: AfterIntroOp 1s ease-in-out 6s forwards;
+    /* animation: AfterIntroOp 1s ease-in-out 6s forwards; */
 }
 @keyframes AfterIntroOp {
     100%{opacity: 0;}
+}
+div.Con_Top div.Con_Top_Text div span{
+    font-family: "Bebas Neue", sans-serif; 
 }
 div.Con_Top div.Con_Top_Text div.Name_Word1{
     top: px;
@@ -134,7 +138,7 @@ div.Con_Top div.Con_Top_Text div span.Word_White{
     color: #fff;
     opacity: 0;
     transition: 1s;
-    animation: NameWord 1s ease-in-out 3.2s forwards;
+    /* animation: NameWord 1s ease-in-out 3.2s forwards; */
 }
 @keyframes NameWord {
     100%{opacity: 1;}
@@ -142,7 +146,7 @@ div.Con_Top div.Con_Top_Text div span.Word_White{
 div.Con_Top div.Con_Top_Text div span.Word_Color{
     width: 0;
     overflow: hidden;
-    animation: NameWordColor 1s ease-in-out 3.7s forwards;
+    /* animation: NameWordColor 1s ease-in-out 3.7s forwards; */
 }
 @keyframes NameWordColor {
     100%{width: 500px;}
@@ -168,14 +172,14 @@ div.Above div.After_Intro_Name{
     height: 100%;    
     display: flex;
     justify-content: center;    
-    opacity: 0;
-    animation: AfterIntroName 1s ease-in-out 6s forwards;
+    /* opacity: 0; */
+    /* animation: AfterIntroName 1s ease-in-out 6s forwards; */
 }
 @keyframes AfterIntroName {
     100%{opacity: 1;}
 }
 div.Above div.After_Intro_Name p.Intro_Name{
-    width: 58px;
+    width: 40px;
     display: inline-block;
     text-align: center;
     font-size: 70px;
@@ -183,10 +187,135 @@ div.Above div.After_Intro_Name p.Intro_Name{
     color: #fff;
     word-wrap: break-word;
     line-height: 82px;
-    padding-top: 10px;
+    padding-top: 25px;
+    font-family: "Bebas Neue", sans-serif;
 }
+
 
 .myContent{
     height: 300px;
 }
 
+
+@property --progress{
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+}
+:root{
+    --c1: #6eccee;
+    --c2: #f672ca;
+    --c3: #fdb428;
+    --c4: #b9f;
+}
+  
+@-webkit-keyframes progress{
+    from{
+      --progress: 0%;
+    }
+    to{
+      --progress: 100%;
+    }
+}
+  
+@keyframes progress{
+    from{
+      --progress: 0%;
+    }
+    to{
+      --progress: 100%;
+    }
+}
+.circle{
+    --progress: 60%;
+    background: conic-gradient(at center, var(--c1) var(--progress), black var(--progress), var(--c2) calc(var(--progress) + 20%), var(--c3) calc(var(--progress) + 30%), var(--c3) calc(var(--progress) + 50%), transparent, transparent, transparent, transparent);
+    -webkit-animation: progress 4s linear infinite;
+            animation: progress 4s linear infinite;
+    border-radius: 50%;
+    -webkit-mask: radial-gradient(circle at center, transparent 65%, black 65%);
+            mask: radial-gradient(circle at center, transparent 65%, black 65%);
+    position: absolute;
+    inset: 0;
+}
+@supports (background: paint(houdini)){
+    .circle{
+      --progress: 0%;
+    }
+}
+.circle:nth-child(2){
+    inset: 20px;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+}
+.circle:nth-child(3){
+    inset: 40px;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+}
+  
+.container{
+    filter: drop-shadow(0 0 0.8vmin black);
+    position: relative;
+    width: 30vmin;
+    aspect-ratio: 1;
+    opacity: 0.6;
+}
+.container:after{
+    content: "";
+    font-weight: bold;
+    position: absolute;
+    font-size: 2.5vmin;
+    inset: 0;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+div#fullpage div#section0{
+    display: flex;
+}
+div#fullpage div#section0 > div{
+    flex: 0 1 50%;
+}
+div#fullpage div#section0 div.Intro_Left{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img{
+    position: relative;
+    width: 100%;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    top: 50px;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
+    left: 39%;
+    top: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 70px rgba(255,255,255,0.5);
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p{
+    width: 300px;
+    height: 300px;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 35%;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Txt p{
+    line-height: 25px;
+}
