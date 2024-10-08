@@ -1,14 +1,8 @@
-var myFullpage = new fullpage('#fullpage', {
-
-    // you can also use the HTML attribute data-tooltip on each section instead
-    navigationTooltips: ['First Section', 'Second Section', 'Third Section'],
-
-    // Navigation for horizontal slides
-    slidesNavigation: true,
-    slidesNavPosition: 'bottom', // Default
-
-    controlArrows: false,
-
-    // Get your license at https://alvarotrigo.com/fullPage/pricing
-    licenseKey: 'xxxxxxxxxxxxxxxxxxxxxxxxx'
+$(document).ready(function() {
+    $('#fullpage').fullpage({
+        verticalCentered: true,
+        anchors: ['anchor1', 'anchor2', 'anchor3', 'anchor4', 'anchor5'],
+        menu: '#menu',
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#ccc', '#aaa']
+    });
 });
