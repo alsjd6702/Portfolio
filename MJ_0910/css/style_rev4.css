@@ -192,11 +192,6 @@ div.Above div.After_Intro_Name p.Intro_Name{
 }
 
 
-.myContent{
-    height: 300px;
-}
-
-
 @property --progress{
     syntax: "<percentage>";
     inherits: true;
@@ -271,11 +266,13 @@ div.Above div.After_Intro_Name p.Intro_Name{
     place-items: center;
 }
 
-div#fullpage div#section0{
+/* div#fullpage div#section0{
+} */
+div#fullpage div#section0 div.fp-tableCell{
     display: flex;
 }
-div#fullpage div#section0 > div{
-    flex: 0 1 50%;
+div#fullpage div#section0 div.fp-tableCell > div{
+    flex: 1 1 50%;
 }
 div#fullpage div#section0 div.Intro_Left{
     width: 100%;
@@ -321,6 +318,7 @@ div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
     letter-spacing: 1px;
 }
 div#fullpage div#section0 div.Intro_Left div.Intro_Txt h1{
+    color: rgb(169, 235, 255);
     text-align: center;
     padding-bottom: 20px;
 }
@@ -335,4 +333,151 @@ div#fullpage div#section0 div.Intro_Left div.Intro_Txt p span{
 div#fullpage div#section0 div.Intro_Right{
     width: 100%;
     height: 100%;
+    padding-left: 50px;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    color: rgb(169, 235, 255);
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+div#fullpage div#section0 div.Intro_Right h1{
+    color: rgb(169, 235, 255);
+    padding: 20px 0 0 20px;
+    box-sizing: border-box;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item{
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px 100px 50px 50px;
+    box-sizing: border-box;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div{
+    display: flex;
+    justify-content: space-between;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage p{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    text-align: center;
+    line-height: 130px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage{
+    position: relative;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130px;
+    height: 130px;
+    transform: rotate(-90deg);
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg circle{
+    stroke-dasharray: 628; stroke-dashoffset: 628; animation: ani 1s infinite; stroke-linecap: round;
+}
+@keyframes ani {
+    0%{stroke-dashoffset: 628;}
+    100%{stroke-dashoffset: 70;}
+}
+/* div#fullpage div#section0 div.Intro_Right div.Skill_Item p{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(#fff,#fff), 
+    linear-gradient(120deg, #fff 0%, #fff 30%, red 30%, red 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+} */
+
+div#fullpage div#section1{
+    position: relative;
+}
+div#fullpage div#section1 div.myContent{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+}
+div#fullpage div#section1 div.myContent > div{
+    flex: 1 1 50%;
+    position: relative;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content h1{
+    text-align: right;
+    color: rgb(237, 190, 255);
+    padding: 30px 100px 40px 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+    animation: TitleColor 3s ease-in-out infinite;
+}
+@keyframes TitleColor {
+    0%{color: rgb(237, 190, 255);}
+    40%{color: rgb(211, 101, 255);}
+    80%{color: #fff;}
+    100%{color: rgb(237, 190, 255);}
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img{
+    width: 80%;
+    margin: 0 auto;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child{
+    width: 100%;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child img{
+    width: 100%;
+    object-fit: cover;
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content h1{
+    color: rgb(237, 190, 255);
+    padding: 30px 0 40px 100px;
+    font-family: "Noto Sans KR", sans-serif;
+    animation: TitleColor 3s ease-in-out infinite;
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt{
+    padding: 100px 90px 0 110px;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #fff;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt p{
+    font-size: 20px;
+    font-weight: 400;
+    word-break: keep-all;
+    padding: 20px 10px;
+    border-bottom: 1px solid rgb(237, 190, 255);
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt p:last-child{
+    border-bottom: none;
+}
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt span{
+    font-weight: bold;
+    color: rgb(237, 190, 255);
+    
 }
