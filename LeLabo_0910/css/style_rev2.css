@@ -129,6 +129,7 @@ header nav ul.menu > li:hover > a{
 
 header nav ul.menu > li:hover ul.sub{
     opacity: 1;
+    z-index: 999;
 }
 
 header nav ul.menu > li ul.sub{
@@ -136,8 +137,8 @@ header nav ul.menu > li ul.sub{
     position: absolute;
     left: 0;
     top: 82px;
-    z-index: 999;
     display: flex;
+    z-index: -1;
     box-sizing: border-box;
     border-top: 1px solid #eee;
     background: #fff;
