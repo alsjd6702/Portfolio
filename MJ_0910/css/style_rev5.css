@@ -379,9 +379,9 @@ div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage sv
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg circle{
     position: absolute;
-    stroke-dasharray: 500; stroke-dashoffset: 20; animation: ani 2s ease-in-out; stroke-linecap: round;
+    stroke-dasharray: 500; stroke-dashoffset: 20; animation: Percentage 2s ease-in-out; stroke-linecap: round;
 }
-@keyframes ani {
+@keyframes Percentage {
     0%{stroke-dashoffset: 500;}
     100%{stroke-dashoffset: 20;}
 }
