@@ -379,12 +379,57 @@ div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage sv
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg circle{
     position: absolute;
-    stroke-dasharray: 500; stroke-dashoffset: 20; animation: Percentage 2s ease-in-out; stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
 }
-@keyframes Percentage {
-    0%{stroke-dashoffset: 500;}
+@keyframes Percentage100 {
+    0%{stroke-dashoffset: 440;}
+    100%{stroke-dashoffset: 0;}
+}
+@keyframes Percentage90 {
+    0%{stroke-dashoffset: 440;}
     100%{stroke-dashoffset: 20;}
 }
+@keyframes Percentage80 {
+    0%{stroke-dashoffset: 440;}
+    100%{stroke-dashoffset: 90;}
+}
+@keyframes Percentage70 {
+    0%{stroke-dashoffset: 440;}
+    100%{stroke-dashoffset: 160;}
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item1 div.Percentage:first-child svg circle{
+    animation: Percentage100 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item1 div.Percentage:last-child svg circle{
+    animation: Percentage90 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item2 div.Percentage:first-child svg circle{
+    animation: Percentage90 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item2 div.Percentage:last-child svg circle{
+    animation: Percentage90 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item3 div.Percentage:first-child svg circle{
+    animation: Percentage80 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item3 div.Percentage:last-child svg circle{
+    animation: Percentage80 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item4 div.Percentage:first-child svg circle{
+    animation: Percentage70 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item4 div.Percentage:last-child svg circle{
+    animation: Percentage70 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item5 div.Percentage:first-child svg circle{
+    animation: Percentage70 2s ease-in-out forwards;
+}
+div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item5 div.Percentage:last-child svg circle{
+    animation: Percentage70 2s ease-in-out forwards;
+}
+
 /* div#fullpage div#section0 div.Intro_Right div.Skill_Item p{
     position: relative;
     width: 70px;
@@ -398,10 +443,10 @@ div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage sv
     background-clip: content-box, border-box;
 } */
 
-div#fullpage div#section1{
+div#fullpage div.section{
     position: relative;
 }
-div#fullpage div#section1 div.myContent{
+div#fullpage div.section div.myContent{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -409,11 +454,11 @@ div#fullpage div#section1 div.myContent{
     top: 0;
     display: flex;
 }
-div#fullpage div#section1 div.myContent > div{
+div#fullpage div.section div.myContent > div{
     flex: 1 1 50%;
     position: relative;
 }
-div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content{
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -421,32 +466,61 @@ div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content{
     transform: translateX(-50%);
     top: 0;
 }
-div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content h1{
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content h1{
     text-align: right;
-    color: rgb(237, 190, 255);
+    color: #fff;
     padding: 30px 100px 40px 0;
     box-sizing: border-box;
     font-family: "Noto Sans KR", sans-serif;
-    animation: TitleColor 3s ease-in-out infinite;
 }
-@keyframes TitleColor {
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content h1{    
+    color: rgb(237, 190, 255);
+    animation: TitleColor1 3s ease-in-out infinite;
+}
+@keyframes TitleColor1 {
     0%{color: rgb(237, 190, 255);}
-    40%{color: rgb(211, 101, 255);}
-    80%{color: #fff;}
-    100%{color: rgb(237, 190, 255);}
+    30%{color: rgb(211, 101, 255);}
+    60%{color: #fff;}
+    90%{color: rgb(237, 190, 255);}
 }
-div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img{
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content h1{    
+    color: #3162d6;
+    animation: TitleColor2 3s ease-in-out infinite;
+}
+@keyframes TitleColor2 {
+    0%{color: #3162d6;}
+    30%{color: #0e4ad6;}
+    60%{color: #fff;}
+    90%{color: #3162d6;}
+}
+div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content h1{    
+    color: #b0f7d8;
+    animation: TitleColor3 3s ease-in-out infinite;
+}
+@keyframes TitleColor3 {
+    0%{color: #b0f7d8;}
+    30%{color: #166d47;}
+    60%{color: #fff;}
+    90%{color: #b0f7d8;}
+}
+/* color: #0ba360, #3cba92; */
+
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img{
     width: 80%;
     margin: 0 auto;
 }
-div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child{
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child{
     width: 100%;
 }
-div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child img{
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child,
+div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child{
+    padding-top: 70px;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child img{
     width: 100%;
     object-fit: cover;
 }
-div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content{
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -454,37 +528,72 @@ div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content{
     transform: translateX(-50%);
     top: 0;
 }
-div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content h1{
-    color: rgb(237, 190, 255);
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content h1{
+    color: #fff;
     padding: 30px 0 40px 100px;
     font-family: "Noto Sans KR", sans-serif;
-    animation: TitleColor 3s ease-in-out infinite;
 }
-div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt{
+div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content h1{
+    color: rgb(237, 190, 255);
+    animation: TitleColor1 3s ease-in-out infinite;
+}
+div#fullpage div#section2 div.myContent div.Section_Right div.Right_Content h1{
+    color: #3162d6;
+    animation: TitleColor2 3s ease-in-out infinite;
+}
+div#fullpage div#section3 div.myContent div.Section_Right div.Right_Content h1{
+    color: #b0f7d8;
+    animation: TitleColor3 3s ease-in-out infinite;
+}
+
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt{
     padding: 90px 90px 0 110px;
     font-family: "Noto Sans KR", sans-serif;
     color: #fff;
     line-height: 40px;
     letter-spacing: 1px;
 }
-div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table{
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table{
     border-collapse: collapse;
 }
-div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr:last-child th,
-div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr:last-child td{
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr:last-child th,
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr:last-child td{
     border-bottom: none;
+}
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th,
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+    border-bottom: 1px solid #fff;
+    font-size: 20px;
+    word-break: keep-all;
 }
 div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th,
 div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
     border-bottom: 1px solid rgb(237, 190, 255);
-    font-size: 20px;
-    word-break: keep-all;
+}
+div#fullpage div#section2 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th,
+div#fullpage div#section2 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+    border-bottom: 1px solid #3162d6;
+}
+div#fullpage div#section3 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th,
+div#fullpage div#section3 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+    border-bottom: 1px solid #b0f7d8;
+}
+
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th{
+    width: 30%;
+    color: #fff;
 }
 div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th{
-    width: 30%;
     color: rgb(237, 190, 255);
 }
-div#fullpage div#section1 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
+div#fullpage div#section2 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th{
+    color: #3162d6;
+}
+div#fullpage div#section3 div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr th{
+    color: #b0f7d8;
+}
+
+div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.Content_Txt table tbody tr td{
     padding: 20px 5px;
     font-weight: 400;
 }
