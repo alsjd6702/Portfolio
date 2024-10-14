@@ -506,20 +506,81 @@ div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content h1{
 /* color: #0ba360, #3cba92; */
 
 div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img{
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
-div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child{
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img{
+    width: 80%;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device{
     width: 100%;
+    position: relative;
 }
-div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child,
-div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child{
-    padding-top: 70px;
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device{
+    display: flex;
 }
-div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child img{
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer{
+    position: relative;
+    top: 100px;
+}
+div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer{
+    padding-top: 170px;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone,
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet{
+    position: absolute;
+    width: 30%;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone{
+    left: 5%;
+    top: 3%;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet{
+    right: 7%;
+    top: 0;
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div p{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div p:first-child img{
     width: 100%;
     object-fit: cover;
 }
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer p:nth-child(2) img{
+    width: 568px;
+    height: 480px;
+    object-fit: contain;
+    position: relative;
+    top: -19px;
+    left: 49px;
+    transform: rotate(-3.5deg);
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone p:nth-child(2) img{
+    width: 75px;
+    height: 200px;
+    object-fit: contain;
+    position: relative;
+    left: 103px;
+    top: -16px;
+    transform: rotate(-15deg);
+}
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet p:nth-child(2) img{
+    width: 142px;
+    height: 200px;
+    object-fit: contain;
+    position: relative;
+    left: 30px;
+    top: 15px;
+    transform: rotate(12deg);
+}
+
+/* div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child,
+div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child{
+    padding-top: 70px;
+} */
+
 div#fullpage div.section div.myContent div.Section_Right div.Right_Content{
     width: 100%;
     height: 100%;
