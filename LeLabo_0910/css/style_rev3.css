@@ -74,6 +74,7 @@ header nav ul.service li:first-child{
 header nav ul.service li:first-child p{
     width: 20px;
     height: 20px;
+    padding-right: 20px;
 }
 header nav ul.service li:first-child p img{
     width: 100%;
@@ -81,8 +82,14 @@ header nav ul.service li:first-child p img{
     object-fit: cover;
     cursor: pointer;
 }
+header nav ul.service li:first-child form{
+    width: 100%;
+}
 header nav ul.service li:first-child input{
     width: 100%;
+    border: none;
+    outline: none;
+    font-family: SangSangClover_Regular;
 }
 
 header nav ul.service li:nth-child(2){
