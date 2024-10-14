@@ -184,6 +184,9 @@ header nav ul.menu > li ul.sub li a{
     color: #000;
     font-size: 16px;
 }
+header nav ul.menu > li:nth-child(7) ul.sub li a{
+    line-height: 35px;
+}
 header nav ul.menu > li:nth-child(1) ul.sub li:first-child a,
 header nav ul.menu > li:nth-child(2) ul.sub li:first-child a,
 header nav ul.menu > li:nth-child(3) ul.sub li:first-child a,
@@ -192,6 +195,10 @@ header nav ul.menu > li:nth-child(5) ul.sub li:first-child a,
 header nav ul.menu > li:nth-child(6) ul.sub li:first-child a,
 header nav ul.menu > li:nth-child(7) ul.sub li:first-child a{
     padding-top: 7px;
+}
+header nav ul.menu > li:nth-child(7) ul.sub li:nth-child(2) a,
+header nav ul.menu > li:nth-child(7) ul.sub li:nth-child(3) a{
+    padding-top: 0;
 }
 header nav ul.menu > li ul.sub li:hover a{
     font-weight: bold;
@@ -794,13 +801,16 @@ footer div.foottxt p:last-child{
         width: 450px;
         height: 100vh;
         position: absolute;
-        left: 0;
+        /* left: -450px; */
         top: 0;
         padding: 10px 20px;
         flex-direction: column;
         align-items: baseline;
         background: #fff;
         gap: 0;
+    }
+    header:hover nav{
+        background: #fff;
     }
     header nav > a{
         width: 90px;
@@ -811,7 +821,9 @@ footer div.foottxt p:last-child{
         object-fit: cover;
         object-position: center -42px;
     }
-
+    header:hover nav > a img{
+        object-position: center -42px;
+    }
     header nav ul.menu{
         flex-direction: column;
         width: 100%;
@@ -838,33 +850,50 @@ footer div.foottxt p:last-child{
     header nav ul.menu > li:nth-child(7) > a{
         line-height: 22px;
     }
+    header nav ul.menu > li:hover > a{
+        border-bottom: none;
+    }
     header nav ul.menu > li > a br{
         display: none;
     }
 
     header nav ul.menu > li ul.sub{
         opacity: 1;
-        height: 100%;
         width: 70%;
+        height: 62px;
         display: flex;
         flex-wrap: wrap;
         top: 0;
         left: 140px;
         transition: 0;
-        gap: 20px;
+        column-gap: 20px;
         overflow: visible;
     }
-    header nav ul.menu > li ul.sub li a{
-        line-height: 62px;
+    header nav ul.menu > li ul.sub li a{        
+        line-height: 0;
     }
     header nav ul.menu > li:nth-child(1) ul.sub li:first-child a,
-    header nav ul.menu > li:nth-child(2) ul.sub li:first-child a,
     header nav ul.menu > li:nth-child(3) ul.sub li:first-child a,
-    header nav ul.menu > li:nth-child(4) ul.sub li:first-child a,
     header nav ul.menu > li:nth-child(5) ul.sub li:first-child a,
-    header nav ul.menu > li:nth-child(6) ul.sub li:first-child a,
-    header nav ul.menu > li:nth-child(7) ul.sub li:first-child a{
-        padding-top: 0;
+    header nav ul.menu > li:nth-child(6) ul.sub li:first-child a
+    {
+        padding: 30px 0;
+    }
+    header nav ul.menu > li:nth-child(1) ul.sub li a,
+    header nav ul.menu > li:nth-child(3) ul.sub li a,
+    header nav ul.menu > li:nth-child(5) ul.sub li a,
+    header nav ul.menu > li:nth-child(6) ul.sub li a{
+        padding: 30px 0;
+    }
+    header nav ul.menu > li:nth-child(7) ul.sub li:nth-child(2) a,
+    header nav ul.menu > li:nth-child(7) ul.sub li:nth-child(3) a{
+        padding-top: 7px;
+    }
+    header nav ul.menu:hover > li ul.sub{
+        height: 62px;
+    }
+    header nav div.bg{
+        display: none;
     }
 
     div.contents div.maincontent{
