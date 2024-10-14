@@ -18,49 +18,12 @@ div.Above{
     z-index: 200;
     width: 100%;
     height: 100vh;
-    /* background-color: #000; */
+    background-color: #000;
     overflow: hidden;
-    /* animation: AfterIntroBG 1s ease-in-out 6s forwards; */
+    animation: AfterIntroBG 1s ease-in-out 6s forwards;
 }
 @keyframes AfterIntroBG {
-    100%{background: transparent;}
-}
-div.Above div.btn{
-    position: absolute;
-    left: 0;
-    top: 0;    
-    padding: 10px;
-    /* opacity: 0; */
-    /* animation: btn 2s ease-in-out 6.5s forwards;     */
-    z-index: 200;
-}
-@keyframes btn {
-    100%{opacity: 1;}
-}
-div.Above div.btn > p.Sign_Img{
-    width: 92px;
-    height: 42px;
-    padding: 10px;
-}
-div.Above div.btn > p.Sign_Img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-div.Above div.btn ul#menu{
-    padding: 0 0 0 10px;
-}
-div.Above div.btn ul#menu li{
-    padding: 5px 0;
-}
-div.Above div.btn ul#menu li a{
-    font-family: "Playwrite DE Grund", cursive;
-    font-weight: bold;
-    font-size: 20px;
-    color: #fff;
-}
-div.Above div.btn ul#menu li a:hover{
-    color: rgb(0, 225, 255);
+    100%{background: transparent; z-index: -1;}
 }
 
 div.Above div.Con_Top div.Con_Top_Text{
@@ -68,7 +31,7 @@ div.Above div.Con_Top div.Con_Top_Text{
     height: 100%;    
     display: flex;
     justify-content: center;
-    /* animation: ConTopText 1s ease-in-out 6s forwards; */
+    animation: ConTopText 1s ease-in-out 6s forwards;
 }
 @keyframes ConTopText {
     100%{opacity: 0;}
@@ -83,8 +46,8 @@ div.Above div.Con_Top div.Con_Top_Text p.Name{
     word-wrap: break-word;
     line-height: 82px;
     padding-top: 25px;
-    /* animation: Name 2s ease-in-out 1.5s forwards;
-    scale: 10; */
+    animation: Name 2s ease-in-out 1.5s forwards;
+    scale: 10;
     opacity: 0;
     transform-origin: center 0;
     font-family: "Bebas Neue", sans-serif;
@@ -104,9 +67,7 @@ div.Con_Top div.Con_Top_Text p.Name span:nth-of-type(3){
 
 div.Con_Top div.Con_Top_Text div{
     position: absolute;
-    left: 50%;
-    top: 0;
-    /* animation: AfterIntroOp 1s ease-in-out 6s forwards; */
+    animation: AfterIntroOp 1s ease-in-out 6s forwards;
 }
 @keyframes AfterIntroOp {
     100%{opacity: 0;}
@@ -114,17 +75,17 @@ div.Con_Top div.Con_Top_Text div{
 div.Con_Top div.Con_Top_Text div span{
     font-family: "Bebas Neue", sans-serif; 
 }
-div.Con_Top div.Con_Top_Text div.Name_Word1{
-    top: px;
-    left: 578px;
+div.Con_Top div.Con_Top_Text div.Name_Word1{    
+    left: 37.25%;
+    top: 26px;
 }
 div.Con_Top div.Con_Top_Text div.Name_Word2{
-    top: 246px;
-    left: 785px;
+    top: 28.5%;
+    left: 44%;
 }
 div.Con_Top div.Con_Top_Text div.Name_Word3{
-    top: 492px;
-    left: 935px;
+    top: 54.3%;
+    left: 49.52%;
 }
 
 div.Con_Top div.Con_Top_Text div > span{
@@ -138,7 +99,7 @@ div.Con_Top div.Con_Top_Text div span.Word_White{
     color: #fff;
     opacity: 0;
     transition: 1s;
-    /* animation: NameWord 1s ease-in-out 3.2s forwards; */
+    animation: NameWord 1s ease-in-out 3.2s forwards;
 }
 @keyframes NameWord {
     100%{opacity: 1;}
@@ -146,7 +107,7 @@ div.Con_Top div.Con_Top_Text div span.Word_White{
 div.Con_Top div.Con_Top_Text div span.Word_Color{
     width: 0;
     overflow: hidden;
-    /* animation: NameWordColor 1s ease-in-out 3.7s forwards; */
+    animation: NameWordColor 1s ease-in-out 3.7s forwards;
 }
 @keyframes NameWordColor {
     100%{width: 500px;}
@@ -164,21 +125,67 @@ div.Con_Top div.Con_Top_Text div.Name_Word3 span.Word_Color{
     color: rgb(243, 81, 41);
 }
 
-div.Above div.After_Intro_Name{
+div.main_bg{
     position: absolute;
     left: 0;
     top: 0;
+}
+div.main_bg div.btn{
+    width: 160px;
+    position: absolute;
+    left: 0;
+    top: 0;    
+    padding: 10px;
+    opacity: 0;
+    animation: btn 1s ease-in-out 6s forwards;    
+    z-index: 200;
+}
+@keyframes btn {
+    100%{opacity: 1;}
+}
+div.main_bg div.btn > p.Sign_Img{
+    width: 92px;
+    height: 42px;
+    padding: 10px;
+}
+div.main_bg div.btn > p.Sign_Img img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.main_bg div.btn ul#menu{
+    padding: 0 0 0 10px;
+}
+div.main_bg div.btn ul#menu li{
+    padding: 5px 0;
+}
+div.main_bg div.btn ul#menu li a{
+    font-family: "Playwrite DE Grund", cursive;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+div.main_bg div.btn ul#menu li a:hover{
+    color: rgb(0, 225, 255);
+}
+
+div.After_Intro_Name{
+    position: absolute;
+    z-index: 500;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 40px;
     height: 100%;    
     display: flex;
-    justify-content: center;    
-    /* opacity: 0; */
-    /* animation: AfterIntroName 1s ease-in-out 6s forwards; */
+    justify-content: center;
+    opacity: 0;
+    animation: AfterIntroName 1s ease-in-out 6s forwards;
 }
 @keyframes AfterIntroName {
     100%{opacity: 1;}
 }
-div.Above div.After_Intro_Name p.Intro_Name{
+div.After_Intro_Name p.Intro_Name{
     width: 40px;
     display: inline-block;
     text-align: center;
@@ -400,34 +407,34 @@ div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage sv
     100%{stroke-dashoffset: 160;}
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item1 div.Percentage:first-child svg circle{
-    animation: Percentage100 2s ease-in-out forwards;
+    animation: Percentage100 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item1 div.Percentage:last-child svg circle{
-    animation: Percentage90 2s ease-in-out forwards;
+    animation: Percentage90 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item2 div.Percentage:first-child svg circle{
-    animation: Percentage90 2s ease-in-out forwards;
+    animation: Percentage90 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item2 div.Percentage:last-child svg circle{
-    animation: Percentage90 2s ease-in-out forwards;
+    animation: Percentage90 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item3 div.Percentage:first-child svg circle{
-    animation: Percentage80 2s ease-in-out forwards;
+    animation: Percentage80 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item3 div.Percentage:last-child svg circle{
-    animation: Percentage80 2s ease-in-out forwards;
+    animation: Percentage80 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item4 div.Percentage:first-child svg circle{
-    animation: Percentage70 2s ease-in-out forwards;
+    animation: Percentage70 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item4 div.Percentage:last-child svg circle{
-    animation: Percentage70 2s ease-in-out forwards;
+    animation: Percentage70 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item5 div.Percentage:first-child svg circle{
-    animation: Percentage70 2s ease-in-out forwards;
+    animation: Percentage70 2s ease-in-out 6.5s forwards;
 }
 div#fullpage div#section0 div.Intro_Right div.Skill_Item > div.Skill_Item5 div.Percentage:last-child svg circle{
-    animation: Percentage70 2s ease-in-out forwards;
+    animation: Percentage70 2s ease-in-out 6.5s forwards;
 }
 
 /* div#fullpage div#section0 div.Intro_Right div.Skill_Item p{
@@ -522,7 +529,6 @@ div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Co
     display: flex;
 }
 div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div{
-    height: 100%;
 }
 div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer{
     position: relative;
@@ -537,14 +543,17 @@ div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content div.Co
     position: relative;
     top: 70px;
 }
-div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone,
+div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone{
+    position: absolute;    
+    width: 18%;
+}
 div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet{
     position: absolute;
     width: 30%;
 }
 div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone{
-    left: 5%;
-    top: 3%;
+    left: 15%;
+    top: 1%;
 }
 div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet{
     right: 7%;
@@ -569,8 +578,8 @@ div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Co
 div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.phone p:nth-child(2){
     width: 75px;
     position: relative;
-    left: 103px;
-    top: 12px;
+    left: 21.5px;
+    top: 13px;
     transform: rotate(-15deg);
 }
 div#fullpage div#section1 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.tablet p:nth-child(2){
@@ -590,7 +599,7 @@ div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Co
 div#fullpage div#section3 div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div.computer p:nth-child(2){
     width: 568px;
     position: relative;
-    top: 45px;
+    top: 44px;
     left: 49px;
     transform: rotate(-3.5deg);
 }
@@ -598,13 +607,10 @@ div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Con
     width: 100%;
     object-fit: contain;
 }
-
 div#fullpage div.section div.myContent div.Section_Left div.Left_Content div.Content_Img div.device div p:nth-child(2) a{
     width: 100%;
     height: 100%;
     display: inline-block;
-    position: relative;
-    z-index: 300;
 }
 
 /* div#fullpage div#section2 div.myContent div.Section_Left div.Left_Content div.Content_Img p:first-child,
