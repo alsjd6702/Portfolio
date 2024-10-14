@@ -367,6 +367,7 @@ footer ul.footmenu{
     display: flex;
     padding-bottom: 30px;    
     padding: 20px 30px;
+    border-top: 1px solid #ddd;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
 }
@@ -389,7 +390,7 @@ footer div.footinfo p{
     font-family: NotoSansKR-Regular;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     header nav ul.service li:nth-child(2){
         flex: 1 1 5%;
     }
@@ -405,4 +406,63 @@ footer div.footinfo p{
 }
 @media (max-width: 1024px) {
     
+} */
+
+div.contentsub{
+    width: 1140px;
+    margin: 0 auto;
+}
+div.contentsub div.contentsub_title{
+    margin-top: 25px;
+}
+div.contentsub div.contentsub_title p a{
+    font-family: NotoSansKR-Regular;
+    font-size: 14px;
+}
+div.contentsub div.contentsub_title p span{
+    font-family: NotoSansKR-Bold;
+    font-size: 10px;
+}
+div.contentsub div.contentsub_title h2{
+    font-family: NotoSansKR-Bold;
+    font-size: 20px;
+    padding: 5px 0 50px;
+    box-sizing: border-box;
+}
+div.contentsub div.sub_content{
+    width: 100%;
+}
+div.contentsub div.sub_content div.sub_con{
+    margin-bottom: 100px;
+}
+div.contentsub div.sub_content div.sub_con:last-child{
+    margin-bottom: 30px;
+}
+div.contentsub div.sub_content div.sub_con a{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+div.contentsub div.sub_content div.sub_con a > p:first-child{
+    font-size: 0;
+}
+div.contentsub div.sub_content div.sub_con a > p:first-child img{
+    width: 100%;
+    object-fit: cover;
+}
+div.contentsub div.sub_content div.sub_con a div.sub_desc{
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-60%);
+}
+div.contentsub div.sub_content div.sub_con a div.sub_desc p{
+    color: #fff;
+    font-size: 26px;
+    font-family: NotoSansKR-Regular;
+    text-align: center;
+    line-height: 30px;
+}
+div.contentsub div.sub_content div.sub_con a div.sub_desc p:first-child{
+    font-family: NotoSansKR-Bold;
 }
