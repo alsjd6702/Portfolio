@@ -19,6 +19,8 @@ $(window).resize(function(){
   let wd =$(window).width()
   if(wd>=995){
     document.querySelector("header nav").style.left = "0";
+  } else{
+    document.querySelector("header nav").style.left = "-450px";
   }
 })
 document.querySelector("header nav > p").onclick = function(){
