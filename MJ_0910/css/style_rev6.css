@@ -831,8 +831,32 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
     }
 
     div#fullpage div#section0 div.fp-tableCell{
-        display: flex;
         flex-direction: column;
+    }
+    div#fullpage div#section0 div.Intro_Left{
+        display: flex;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img{
+        flex: 1 1 50%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
+        position: relative;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:first-child{
+        left: 20%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
+        left: 25%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
+        position: relative;
+        flex: 1 1 50%;
+        left: 0;
+        top: 0;
+        transform: translate(0,0);
+    }
+    div#fullpage div#section0 div.Intro_Right{        
+        flex: 1 1 50%;
     }
 }
 @media screen and (max-width: 767px) {
