@@ -708,7 +708,7 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
     div.main_bg div.btn ul#menu li a{
         font-size: 18px;
     }
-    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:first-child{
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
         width: 250px;
         top: 90px;
         left: 33%;
@@ -762,8 +762,8 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
     div.main_bg div.btn ul#menu li a{
         font-size: 15px;
     }
-    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:first-child{
-        width: 200px;
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
+        width: 230px;
         top: 140px;
         left: 30%;
     }
@@ -801,16 +801,16 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
         left: 0;
         top: 50%;
         transform: translate(0,-50%);
-        height: 60px;
+        height: 70px;
         align-items: center;
+        padding-left: 23px;
     }
     div.After_Intro_Name p.Intro_Name{
         width: 100%;
         display: inline;
-        line-height: 60px;
         padding: 0;
-        letter-spacing: 40px;
-        padding-left: 30px;
+        letter-spacing: 50px;
+        line-height: 70px;
     }
     div.main_bg div.btn{
         width: 800px;
@@ -833,6 +833,9 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
     div#fullpage div#section0 div.fp-tableCell{
         flex-direction: column;
     }
+    div#fullpage div#section0 div.fp-tableCell > div{
+        flex: 0 0 50%;
+    }
     div#fullpage div#section0 div.Intro_Left{
         display: flex;
     }
@@ -840,24 +843,97 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
         flex: 1 1 50%;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
-        position: relative;
+        position: absolute;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:first-child{
         left: 20%;
+        top: 115px;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
         left: 25%;
+        top: 145px;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p{
+        width: 240px;
+        height: 240px;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
         position: relative;
         flex: 1 1 50%;
-        left: 0;
-        top: 0;
+        left: 60px;
+        top: 85px;
         transform: translate(0,0);
+        line-height: 32px;
     }
-    div#fullpage div#section0 div.Intro_Right{        
-        flex: 1 1 50%;
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt h1{
+        padding-bottom: 5px;
+        text-align: left;
     }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt p{
+        font-size: 18px;
+    }
+    div#fullpage div#section0 div.Intro_Right{
+        padding-left: 0;
+    }
+    div#fullpage div#section0 div.Intro_Right h1{
+        padding: 30px 0 7px 30px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item{
+        display: flex;
+        width: 90%;
+        padding: 0;
+        justify-content: space-between;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div{
+        display: flex;
+        flex-direction: column;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage p{
+        width: 110px;
+        height: 110px;
+        line-height: 110px;
+        font-size: 14px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage:first-child p{
+        margin-bottom: 20px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg{
+        width: 130px;
+        height: 130px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage:first-child svg{
+        margin-bottom: 20px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg circle{
+        cx: 65;
+        cy: 65;
+        r: 60;
+    }
+}
+@media screen and (max-width: 836px) {
+    div.main_bg div.btn{
+        width: 690px;
+        gap: 5px;
+    }
+    div.main_bg div.btn ul#menu{
+        gap: 25px;
+    }
+    div.main_bg div.btn ul#menu li a{
+        font-size: 20px;
+    }
+
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
+        width: 200px;
+        top: 130px;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
+        top: 160px;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p{
+        width: 220px;
+        height: 200px;
+    }
+    /* 위에 그림자 사라져서 circle과 이미지 위치 다시 맞추기 */
 }
 @media screen and (max-width: 767px) {
     
