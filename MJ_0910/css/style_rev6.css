@@ -846,11 +846,11 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
         position: absolute;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:first-child{
-        left: 20%;
+        left: 21%;
         top: 115px;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
-        left: 25%;
+        left: 26%;
         top: 145px;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p{
