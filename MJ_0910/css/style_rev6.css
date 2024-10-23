@@ -149,7 +149,6 @@ div.main_bg div.btn > p.Sign_Img{
 }
 div.main_bg div.btn > p.Sign_Img img{
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 div.main_bg div.btn ul#menu{
@@ -291,6 +290,8 @@ div#fullpage div#section0 div.Intro_Left div.Intro_Img{
 }
 div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
     position: absolute;
+}
+div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(1){
     width: 270px;
     left: 35%;
     top: 80px;
@@ -708,7 +709,7 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
     div.main_bg div.btn ul#menu li a{
         font-size: 18px;
     }
-    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(1){
         width: 250px;
         top: 90px;
         left: 33%;
@@ -762,7 +763,7 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
     div.main_bg div.btn ul#menu li a{
         font-size: 15px;
     }
-    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(1){
         width: 230px;
         top: 140px;
         left: 30%;
@@ -842,15 +843,12 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
     div#fullpage div#section0 div.Intro_Left div.Intro_Img{
         flex: 1 1 50%;
     }
-    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
-        position: absolute;
-    }
-    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:first-child{
-        left: 21%;
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(1){
+        left: 23%;
         top: 115px;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
-        left: 26%;
+        left: 28%;
         top: 145px;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p{
@@ -860,7 +858,7 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
     div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
         position: relative;
         flex: 1 1 50%;
-        left: 60px;
+        left: 50px;
         top: 85px;
         transform: translate(0,0);
         line-height: 32px;
@@ -922,19 +920,196 @@ div#fullpage div.section div.myContent div.Section_Right div.Right_Content div.C
         font-size: 20px;
     }
 
-    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div{
+    div.After_Intro_Name{
+        height: 65px;
+    }
+    div.After_Intro_Name p.Intro_Name{
+        letter-spacing: 45px;
+        font-size: 65px;
+        line-height: 65px;
+    }
+
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(1){
         width: 200px;
-        top: 130px;
+        top: 127px;
+        left: 26%;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
-        top: 160px;
+        top: 157px;
+        left: 33%;
     }
     div#fullpage div#section0 div.Intro_Left div.Intro_Img > div p{
-        width: 220px;
+        width: 200px;
         height: 200px;
     }
-    /* 위에 그림자 사라져서 circle과 이미지 위치 다시 맞추기 */
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
+        line-height: 30px;
+        left: 45px;
+        top: 97px;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt h1{
+        font-size: 25px;
+        padding-bottom: 0;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt p{
+        font-size: 16px;
+    }
+    div#fullpage div#section0 div.Intro_Right h1{
+        font-size: 25px;
+        padding: 40px 0 10px 35px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage p{
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 13px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg{
+        width: 120px;
+        height: 120px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg circle{
+        cx: 60;
+        cy: 60;
+        r: 55;
+    }
 }
-@media screen and (max-width: 767px) {
-    
+@media screen and (max-width: 780px) {
+    div.After_Intro_Name{
+        padding-left: 20px;
+    }
+    div.After_Intro_Name p.Intro_Name{
+        letter-spacing: 40px;
+    }
+
+    div.main_bg div.btn{
+        width: 650px;
+    }
+    div.main_bg div.btn ul#menu{
+        gap: 20px;
+    }
+    div.main_bg div.btn ul#menu li a{
+        font-size: 18px;
+    }
+
+    div#fullpage div#section0 div.Intro_Right h1{
+        padding: 40px 0 10px 30px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item{
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: 735px) {
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(1){
+        left: 23%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
+        left: 30%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
+        left: 40px;
+    }
+    div#fullpage div#section0 div.Intro_Right h1{
+        padding: 50px 0 15px 35px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage p{
+        width: 90px;
+        height: 90px;
+        line-height: 90px;
+        font-size: 12px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg{
+        width: 110px;
+        height: 110px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg circle{
+        cx: 55;
+        cy: 55;
+        r: 50;
+    }
+}
+@media screen and (max-width: 710px) {
+    div.After_Intro_Name{
+        padding-left: 18px;
+    }
+    div.After_Intro_Name p.Intro_Name{
+        letter-spacing: 35px;
+    }
+}
+@media screen and (max-width: 685px) {
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(1){
+        left: 20%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
+        left: 27%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
+        left: 30px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage p{
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 10px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg{
+        width: 100px;
+        height: 100px;
+    }
+    div#fullpage div#section0 div.Intro_Right div.Skill_Item > div div.Percentage svg circle{
+        cx: 50;
+        cy: 50;
+        r: 45;
+    }
+}
+@media screen and (max-width: 650px) {    
+    div.main_bg div.btn > p.Sign_Img{
+        width: 80px;
+    }
+    div.main_bg div.btn{
+        width: 570px;
+    }
+    div.main_bg div.btn ul#menu{
+        gap: 15px;
+    }
+    div.main_bg div.btn ul#menu li a{
+        font-size: 16px;
+    }
+
+    div.After_Intro_Name{
+        padding-left: 15px;
+    }
+    div.After_Intro_Name p.Intro_Name{
+        letter-spacing: 30px;
+    }
+
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(1){
+        left: 18%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Img > div:nth-child(2){
+        left: 25%;
+    }
+    div#fullpage div#section0 div.Intro_Left div.Intro_Txt{
+        left: 25px;
+    }
+}
+@media screen and (max-width: 635px){
+
+}
+@media screen and (max-width: 597px) {
+    div.After_Intro_Name{
+        padding-left: 13px;
+    }
+    div.After_Intro_Name p.Intro_Name{
+        letter-spacing: 25px;
+    }
+}
+@media screen and (max-width: 540px) {
+    div.After_Intro_Name{
+        padding-left: 10px;
+    }
+    div.After_Intro_Name p.Intro_Name{
+        letter-spacing: 20px;
+    }
 }
